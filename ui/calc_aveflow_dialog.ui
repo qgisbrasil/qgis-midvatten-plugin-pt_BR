@@ -67,7 +67,7 @@
         </font>
        </property>
        <property name="text">
-        <string>Average flow (l/s) is about to be calculated and stored in table w_flow (parameter='Aveflow'). For the calculation, all values of accumulated volume ('Accvol') are assumed to be given in m3. Any existing values of 'Aveflow' will be left unchanged and only such values that are not already present in the database will be added. 
+        <string>Fluxo médo (l/s) is about to be calculated and stored in table w_flow (parameter='Aveflow'). For the calculation, all values of accumulated volume ('Accvol') are assumed to be given in m3. Any existing values of 'Aveflow' will be left unchanged and only such values that are not already present in the database will be added. 
 
 Aveflow is to be calculated for Accvol observations within this interval:</string>
        </property>
