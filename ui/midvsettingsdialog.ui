@@ -17,7 +17,7 @@
    <item row="1" column="0">
     <widget class="QLineEdit" name="txtpath">
      <property name="whatsThis">
-      <string>Selected SpatiaLite Database</string>
+      <string>Base de dados SpatiaLite selecionada</string>
      </property>
      <property name="readOnly">
       <bool>true</bool>
@@ -27,14 +27,14 @@
    <item row="1" column="1">
     <widget class="QPushButton" name="btnSetDB">
      <property name="text">
-      <string>Select DB</string>
+      <string>Selecionar BD</string>
      </property>
     </widget>
    </item>
    <item row="0" column="0" colspan="2">
     <widget class="QLabel" name="label_2">
      <property name="text">
-      <string>SQLite database:</string>
+      <string>Base de dados SQLite:</string>
      </property>
     </widget>
    </item>
@@ -61,7 +61,7 @@
      </property>
      <widget class="QWidget" name="TAB_TSPLOT">
       <attribute name="title">
-       <string>Time Series</string>
+       <string>Série Temporal</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_3">
        <item row="0" column="0">
@@ -72,7 +72,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Table:</string>
+          <string>Tabela:</string>
          </property>
         </widget>
        </item>
@@ -95,7 +95,7 @@
           </sizepolicy>
          </property>
          <property name="text">
-          <string>Table Status</string>
+          <string>Status da tabela</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -113,7 +113,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Column:</string>
+          <string>Coluna:</string>
          </property>
         </widget>
        </item>
@@ -126,7 +126,7 @@
           <bool>true</bool>
          </property>
          <property name="text">
-          <string>Dot markers on line</string>
+          <string>Marcadores na linha</string>
          </property>
         </widget>
        </item>
@@ -144,7 +144,7 @@
      </widget>
      <widget class="QWidget" name="TAB_XYPLOT">
       <attribute name="title">
-       <string>XY Scatter</string>
+       <string>Dispersão XY</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_2">
        <item row="0" column="0">
@@ -155,7 +155,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Table:</string>
+          <string>Tabela:</string>
          </property>
         </widget>
        </item>
@@ -167,7 +167,7 @@
           </font>
          </property>
          <property name="text">
-          <string>y1-column:</string>
+          <string>coluna-y1:</string>
          </property>
         </widget>
        </item>
@@ -199,7 +199,7 @@
           </font>
          </property>
          <property name="text">
-          <string>x-column:</string>
+          <string>coluna-x:</string>
          </property>
         </widget>
        </item>
@@ -211,7 +211,7 @@
           </font>
          </property>
          <property name="text">
-          <string>y2-column:</string>
+          <string>coluna-y2:</string>
          </property>
         </widget>
        </item>
@@ -241,7 +241,7 @@
           <bool>true</bool>
          </property>
          <property name="text">
-          <string>Dot markers on lines</string>
+          <string>Marcadores na linha</string>
          </property>
         </widget>
        </item>
@@ -253,7 +253,7 @@
           </font>
          </property>
          <property name="text">
-          <string>y3-column:</string>
+          <string>coluna-y3:</string>
          </property>
         </widget>
        </item>
@@ -276,7 +276,7 @@
           </sizepolicy>
          </property>
          <property name="text">
-          <string>Table Status</string>
+          <string>Status da tabela</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -290,7 +290,7 @@
      </widget>
      <widget class="QWidget" name="tab">
       <attribute name="title">
-       <string>W quality report</string>
+       <string>Relatório qual. água</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_4">
        <item row="0" column="0">
@@ -301,7 +301,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Table:</string>
+          <string>Tabela:</string>
          </property>
         </widget>
        </item>
@@ -313,7 +313,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Unit column (empty if none):</string>
+          <string>Coluna unidades (vazio se nenhuma):</string>
          </property>
         </widget>
        </item>
@@ -345,7 +345,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Parameter name:</string>
+          <string>Nome do parâmetro:</string>
          </property>
         </widget>
        </item>
@@ -357,7 +357,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Column for additional sorting, besides from date_time (e.g. sample depth, lab report no.):</string>
+          <string>Coluna adicional, fora data_hora (ex: profundidade da amostra...):</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
@@ -392,7 +392,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Analysis value:</string>
+          <string>Valor da análise:</string>
          </property>
         </widget>
        </item>
@@ -423,7 +423,7 @@
      </widget>
      <widget class="QWidget" name="TAB_STRATIGRAPHY">
       <attribute name="title">
-       <string>Stratigraphy</string>
+       <string>Estratigrafia</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_5">
        <item row="0" column="0">
@@ -434,7 +434,7 @@
           </font>
          </property>
          <property name="text">
-          <string>Table:</string>
+          <string>Tabela:</string>
          </property>
         </widget>
        </item>
@@ -457,7 +457,7 @@
           </sizepolicy>
          </property>
          <property name="text">
-          <string>Table status</string>
+          <string>Status da tabela</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -484,7 +484,7 @@
      </widget>
      <widget class="QWidget" name="TAB_PIPER">
       <attribute name="title">
-       <string>Piper Diagram</string>
+       <string>Diagrama Piper</string>
       </attribute>
      </widget>
     </widget>
