@@ -67,10 +67,10 @@
         </font>
        </property>
        <property name="text">
-        <string>Water levels (in meter above sea level) will be calculated as:
+        <string>Níveis de água (em metros acima do nível do mar) serão calculados como:
 
 obs_points.h_toc - w_levels.meas
-(Top Of Casing - Measurement)</string>
+(Boca do poço - Medição)</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -128,7 +128,7 @@ obs_points.h_toc - w_levels.meas
         </font>
        </property>
        <property name="text">
-        <string>From:</string>
+        <string>De:</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -159,7 +159,7 @@ obs_points.h_toc - w_levels.meas
         </font>
        </property>
        <property name="text">
-        <string>To:</string>
+        <string>Até:</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -321,8 +321,8 @@ obs_points.h_toc - w_levels.meas
         </font>
        </property>
        <property name="text">
-        <string>Do you want the db table w_levels to be updated for
-all or only the selected objects?</string>
+        <string>Você deseja que a tabela 'w_levels' seja atualizada para
+ +todos objetos ou apenas selecionados?</string>
        </property>
        <property name="wordWrap">
         <bool>true</bool>
@@ -350,7 +350,7 @@ all or only the selected objects?</string>
         </font>
        </property>
        <property name="text">
-        <string>All</string>
+        <string>Todos</string>
        </property>
       </widget>
      </item>
@@ -375,7 +375,7 @@ all or only the selected objects?</string>
         </font>
        </property>
        <property name="text">
-        <string>Selected</string>
+        <string>Selecionados</string>
        </property>
       </widget>
      </item>
@@ -400,7 +400,7 @@ all or only the selected objects?</string>
         </font>
        </property>
        <property name="text">
-        <string>Cancel</string>
+        <string>Cancelar</string>
        </property>
       </widget>
      </item>
