@@ -324,7 +324,7 @@ Aveflow é calculado para observações Accvol dentro deste intervalo:</string>
         </font>
        </property>
        <property name="text">
-        <string>'Aveflow' deve ser calculado para todos objetos ou apenas selecionados? (A questão refere-se apenas aos pontos (obsid). 'Aveflow' será sempre calculado para todos 'instrumentids' dos pontos selecionados.</string>
+        <string>'Aveflow' deve ser calculado para todos objetos ou apenas selecionados? (A questão refere-se apenas aos pontos (obsid). 'Aveflow' será sempre calculado para todos 'instrumentids' dos pontos selecionados.)</string>
        </property>
        <property name="wordWrap">
         <bool>true</bool>
