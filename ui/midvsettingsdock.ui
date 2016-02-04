@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Midvatten Settings</string>
+   <string>Configurações Midvatten</string>
   </property>
   <widget class="QWidget" name="dockWidgetContents">
    <layout class="QGridLayout" name="gridLayout_9">
@@ -25,7 +25,7 @@
          </font>
         </property>
         <property name="toolTip">
-         <string>selected midvatten plugin database</string>
+         <string>base de dados midvatten selecionada</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -60,7 +60,7 @@
          </font>
         </property>
         <property name="text">
-         <string>DB</string>
+         <string>BD</string>
         </property>
        </widget>
       </item>
@@ -90,10 +90,10 @@
       </property>
       <widget class="QWidget" name="TAB_TSPLOT_2">
        <attribute name="title">
-        <string>TSplot</string>
+        <string>gráfST</string>
        </attribute>
        <attribute name="toolTip">
-        <string>Time Series Plot</string>
+        <string>Gráfico Série Temporal</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_18">
         <item row="0" column="0">
@@ -129,7 +129,7 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>Table:</string>
+                   <string>Tabela:</string>
                   </property>
                  </widget>
                 </item>
@@ -157,7 +157,7 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>Table Status</string>
+                   <string>Status Tabela</string>
                   </property>
                   <property name="alignment">
                    <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -181,7 +181,7 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>Column:</string>
+                   <string>Coluna:</string>
                   </property>
                  </widget>
                 </item>
@@ -216,7 +216,7 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>Dot markers on line</string>
+                   <string>Marcadores na linha</string>
                   </property>
                  </widget>
                 </item>
@@ -248,10 +248,10 @@
       </widget>
       <widget class="QWidget" name="TAB_XYPLOT_2">
        <attribute name="title">
-        <string>XYplot</string>
+        <string>gráf-XY</string>
        </attribute>
        <attribute name="toolTip">
-        <string>XY Scatter plot</string>
+        <string>Gráfico dispersão XY</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_5">
         <item row="0" column="0">
@@ -285,7 +285,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>Table:</string>
+                 <string>Tabela:</string>
                 </property>
                </widget>
               </item>
@@ -316,7 +316,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>Table Status</string>
+                 <string>Status da tabela</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -340,7 +340,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>x-column:</string>
+                 <string>coluna-x:</string>
                 </property>
                </widget>
               </item>
@@ -371,7 +371,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>y1-column:</string>
+                 <string>coluna-y1:</string>
                 </property>
                </widget>
               </item>
@@ -402,7 +402,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>y2-column:</string>
+                 <string>coluna-y2:</string>
                 </property>
                </widget>
               </item>
@@ -433,7 +433,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>y3-column:</string>
+                 <string>coluna-y3:</string>
                 </property>
                </widget>
               </item>
@@ -469,7 +469,7 @@
                  <bool>true</bool>
                 </property>
                 <property name="text">
-                 <string>Dot markers on lines</string>
+                 <string>Marcadores na linha</string>
                 </property>
                </widget>
               </item>
@@ -483,10 +483,10 @@
       </widget>
       <widget class="QWidget" name="tab_2">
        <attribute name="title">
-        <string>WQual report</string>
+        <string>Relatório qual. água</string>
        </attribute>
        <attribute name="toolTip">
-        <string>W quality report</string>
+        <string>Relatório qualidade água</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_17">
         <item row="0" column="0">
@@ -520,10 +520,10 @@
                  </font>
                 </property>
                 <property name="toolTip">
-                 <string>table with water quality data</string>
+                 <string>tabela com dados de qualidade da água</string>
                 </property>
                 <property name="text">
-                 <string>Table:</string>
+                 <string>Tabela:</string>
                 </property>
                </widget>
               </item>
@@ -536,7 +536,7 @@
                  </sizepolicy>
                 </property>
                 <property name="toolTip">
-                 <string>table with water quality data</string>
+                 <string>tabela com dados de qualidade da água</string>
                 </property>
                </widget>
               </item>
@@ -554,7 +554,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>Parameter name:</string>
+                 <string>Nome do parâmetro:</string>
                 </property>
                </widget>
               </item>
@@ -567,7 +567,7 @@
                  </sizepolicy>
                 </property>
                 <property name="toolTip">
-                 <string>column containing parameter name</string>
+                 <string>coluna contendo o nome do parâmetro</string>
                 </property>
                </widget>
               </item>
@@ -585,7 +585,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>Analysis value:</string>
+                 <string>Valor da análise:</string>
                 </property>
                </widget>
               </item>
@@ -598,7 +598,7 @@
                  </sizepolicy>
                 </property>
                 <property name="toolTip">
-                 <string>column containing parameter value</string>
+                 <string>coluna contendo o valor do parâmetro</string>
                 </property>
                </widget>
               </item>
@@ -616,7 +616,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>Unit column (empty if none):</string>
+                 <string>Coluna unidades (vazio se nenhuma):</string>
                 </property>
                </widget>
               </item>
@@ -629,7 +629,7 @@
                  </sizepolicy>
                 </property>
                 <property name="toolTip">
-                 <string>column containing unit for parameter</string>
+                 <string>coluna contendo a unidade do parâmetro</string>
                 </property>
                </widget>
               </item>
@@ -647,10 +647,10 @@
                  </font>
                 </property>
                 <property name="toolTip">
-                 <string>could be sample depth, lab report no. etc</string>
+                 <string>por exemplo: profundidade da amostra, número do relatório, etc</string>
                 </property>
                 <property name="text">
-                 <string>Column for additional sorting:</string>
+                 <string>Coluna adicional:</string>
                 </property>
                 <property name="wordWrap">
                  <bool>true</bool>
@@ -666,7 +666,7 @@
                  </sizepolicy>
                 </property>
                 <property name="toolTip">
-                 <string>could be sample depth, lab report no. etc</string>
+                 <string>por exemplo: profundidade da amostra, número do relatório, etc</string>
                 </property>
                </widget>
               </item>
@@ -693,10 +693,10 @@
       </widget>
       <widget class="QWidget" name="TAB_STRATIGRAPHY_2">
        <attribute name="title">
-        <string>Stratigraphy</string>
+        <string>Estratigrafia</string>
        </attribute>
        <attribute name="toolTip">
-        <string>Stratigraphy</string>
+        <string>Estratigrafia</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_20">
         <item row="0" column="0">
@@ -725,7 +725,7 @@
                  </sizepolicy>
                 </property>
                 <property name="toolTip">
-                 <string>table containing stratigraphy info</string>
+                 <string>tabela com informações estratigráficas</string>
                 </property>
                </widget>
               </item>
@@ -743,10 +743,10 @@
                  </font>
                 </property>
                 <property name="toolTip">
-                 <string>table containing stratigraphy info</string>
+                 <string>tabela com informações estratigráficas</string>
                 </property>
                 <property name="text">
-                 <string>Table:</string>
+                 <string>Tabela:</string>
                 </property>
                </widget>
               </item>
@@ -777,7 +777,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>Table status</string>
+                 <string>Status da tabela</string>
                 </property>
                 <property name="alignment">
                  <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -800,7 +800,7 @@
         <string>Piper</string>
        </attribute>
        <attribute name="toolTip">
-        <string>Piper Diagram</string>
+        <string>Diagrama Piper</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_25">
         <item row="0" column="0">
@@ -832,7 +832,7 @@
                  </sizepolicy>
                 </property>
                 <property name="toolTip">
-                 <string>parameter name for calcium (mg/l)</string>
+                 <string>nome do parâmetro para cálcio (mg/l)</string>
                 </property>
                </widget>
               </item>
@@ -850,7 +850,7 @@
                  </font>
                 </property>
                 <property name="toolTip">
-                 <string>select here to get unique markers</string>
+                 <string>selecione para marcadores únicos</string>
                 </property>
                 <item>
                  <property name="text">
@@ -859,22 +859,22 @@
                 </item>
                 <item>
                  <property name="text">
-                  <string>type</string>
+                  <string>tipo</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string>date_time</string>
+                  <string>data_hora</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string>obsid but no legend</string>
+                  <string>obsid sem legenda</string>
                  </property>
                 </item>
                 <item>
                  <property name="text">
-                  <string>simple marker</string>
+                  <string>marcador simples</string>
                  </property>
                 </item>
                </widget>
@@ -882,7 +882,7 @@
               <item row="17" column="0">
                <widget class="QLabel" name="Piperinfo">
                 <property name="text">
-                 <string>This feature assumes your water quality data is stored in a table &quot;w_qual_lab&quot; as in a midvatten default database. The parameters for piper diagrams must be given in mg/l and with the parameter names exactly as selected above.</string>
+                 <string>Este recurso assume que seus dados de qualidade de água estão armazenados na tabela &quot;w_qual_lab&quot; igual à base de dados padrão midvatten. Os parâmetros para o diagrama piper devem ser em mg/l e os nomes dos parâmetros exatamente como selecionados acima.</string>
                 </property>
                 <property name="wordWrap">
                  <bool>true</bool>
@@ -901,7 +901,7 @@
                  </sizepolicy>
                 </property>
                 <property name="toolTip">
-                 <string>parameter name for chloride (mg/l)</string>
+                 <string>nome do parâmetro para cloreto (mg/l)</string>
                 </property>
                </widget>
               </item>
@@ -919,7 +919,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>Mg, Magnesium parameter:</string>
+                 <string>Mg, parâmetro magnésio:</string>
                 </property>
                </widget>
               </item>
@@ -935,7 +935,7 @@
                  </sizepolicy>
                 </property>
                 <property name="toolTip">
-                 <string>parameter name for Natrium (mg/l)</string>
+                 <string>nome do parâmetro para sódio(mg/l)</string>
                 </property>
                </widget>
               </item>
@@ -953,7 +953,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>Na, Natrium parameter:</string>
+                 <string>Na, parâmetro sódio:</string>
                 </property>
                </widget>
               </item>
@@ -969,7 +969,7 @@
                  </sizepolicy>
                 </property>
                 <property name="toolTip">
-                 <string>parameter name for sulfate (mg/l)</string>
+                 <string>nome do parâmetro para sulfato (mg/l)</string>
                 </property>
                </widget>
               </item>
@@ -987,7 +987,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>Markers unique for:</string>
+                 <string>Marcadores únicos para:</string>
                 </property>
                </widget>
               </item>
@@ -1003,7 +1003,7 @@
                  </sizepolicy>
                 </property>
                 <property name="toolTip">
-                 <string>parameter name for potassium (mg/l)</string>
+                 <string>nome do parâmetro para potássio (mg/l)</string>
                 </property>
                </widget>
               </item>
@@ -1021,7 +1021,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>Cl, Chloride parameter:</string>
+                 <string>Cl, parâmetro cloreto:</string>
                 </property>
                </widget>
               </item>
@@ -1039,7 +1039,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>HCO3, Alcalinity parameter:</string>
+                 <string>HCO3, parâmetro alcalinidade:</string>
                 </property>
                </widget>
               </item>
@@ -1057,7 +1057,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>K, Potassium parameter:</string>
+                 <string>K, parâmetro potássio:</string>
                 </property>
                </widget>
               </item>
@@ -1075,7 +1075,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>Ca, Calcium parameter:</string>
+                 <string>Ca, parâmetro cálcio:</string>
                 </property>
                </widget>
               </item>
@@ -1091,7 +1091,7 @@
                  </sizepolicy>
                 </property>
                 <property name="toolTip">
-                 <string>parameter name for alcalinity (mg/l)</string>
+                 <string>nome do parâmetro para alcalinidade (mg/l)</string>
                 </property>
                </widget>
               </item>
@@ -1107,7 +1107,7 @@
                  </sizepolicy>
                 </property>
                 <property name="toolTip">
-                 <string>parameter name for magnesium (mg/l)</string>
+                 <string>nome do parâmetro para magnésio (mg/l)</string>
                 </property>
                </widget>
               </item>
@@ -1125,7 +1125,7 @@
                  </font>
                 </property>
                 <property name="text">
-                 <string>SO4, Sulfate parameter:</string>
+                 <string>SO4, parâmetro sulfato:</string>
                 </property>
                </widget>
               </item>
