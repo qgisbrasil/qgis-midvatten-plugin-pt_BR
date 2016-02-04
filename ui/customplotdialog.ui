@@ -231,7 +231,7 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>Filter #1</string>
+                   <string>Filtro #1</string>
                   </property>
                   <property name="buddy">
                    <cstring>Filter1_ComboBox_1</cstring>
@@ -267,7 +267,7 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>Filter #2</string>
+                   <string>Filtro #2</string>
                   </property>
                   <property name="buddy">
                    <cstring>Filter1_ComboBox_1</cstring>
@@ -388,7 +388,7 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>Tipo de gráfico</string>
+                   <string>Estilo do gráfico</string>
                   </property>
                  </widget>
                 </item>
@@ -411,7 +411,7 @@
                   </item>
                   <item>
                    <property name="text">
-                    <string>line and cross</string></string>
+                    <string>linha e cruz</string></string>
                    </property>
                   </item>
                   <item>
@@ -637,7 +637,7 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>Filter #1</string>
+                   <string>Filtro #1</string>
                   </property>
                   <property name="buddy">
                    <cstring>Filter1_ComboBox_1</cstring>
@@ -673,7 +673,7 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>Filter #2</string>
+                   <string>Filtro #2</string>
                   </property>
                   <property name="buddy">
                    <cstring>Filter1_ComboBox_1</cstring>
@@ -794,7 +794,7 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>Tipo de gráfico</string>
+                   <string>Estilo do gráfico</string>
                   </property>
                  </widget>
                 </item>
@@ -817,7 +817,7 @@
                   </item>
                   <item>
                    <property name="text">
-                    <string>line and cross</string>
+                    <string>linha e cruz</string>
                    </property>
                   </item>
                   <item>
@@ -1043,7 +1043,7 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>Filter #1</string>
+                   <string>Filtro #1</string>
                   </property>
                   <property name="buddy">
                    <cstring>Filter1_ComboBox_1</cstring>
@@ -1079,7 +1079,7 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>Filter #2</string>
+                   <string>Filtro #2</string>
                   </property>
                   <property name="buddy">
                    <cstring>Filter1_ComboBox_1</cstring>
@@ -1200,7 +1200,7 @@
                    </font>
                   </property>
                   <property name="text">
-                   <string>Tipo de gráfico</string>
+                   <string>Estilo do gráfico</string>
                   </property>
                  </widget>
                 </item>
@@ -1223,7 +1223,7 @@
                   </item>
                   <item>
                    <property name="text">
-                    <string>line and cross</string>
+                    <string>linha e cruz</string>
                    </property>
                   </item>
                   <item>
@@ -1273,7 +1273,7 @@
              </font>
             </property>
             <property name="text">
-             <string>Discontinuous plot if time step &gt; days</string>
+             <string>Plotagem descontínua se o intervalo de tempo &gt; dias</string>
             </property>
             <property name="wordWrap">
              <bool>true</bool>
