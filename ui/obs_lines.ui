@@ -23,7 +23,7 @@
     </rect>
    </property>
    <property name="title">
-    <string>Line of observation</string>
+    <string>Linha de observação</string>
    </property>
    <layout class="QGridLayout" name="gridLayout_4">
     <item row="0" column="0">
@@ -132,7 +132,7 @@
          <enum>Qt::RightToLeft</enum>
         </property>
         <property name="text">
-         <string>obsnamn</string>
+         <string>nomeobs</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -204,7 +204,7 @@
          <enum>Qt::RightToLeft</enum>
         </property>
         <property name="text">
-         <string>obstyp</string>
+         <string>tipo</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -276,7 +276,7 @@
          <enum>Qt::RightToLeft</enum>
         </property>
         <property name="text">
-         <string>plats</string>
+         <string>local</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -342,7 +342,7 @@
          </font>
         </property>
         <property name="text">
-         <string>referens</string>
+         <string>referência</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
