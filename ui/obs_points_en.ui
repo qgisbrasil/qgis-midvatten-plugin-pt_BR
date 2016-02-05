@@ -24,7 +24,7 @@
       </font>
      </property>
      <property name="title">
-      <string>The observation point</string>
+      <string>Ponto de observação</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_2">
       <property name="margin">
@@ -144,7 +144,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;measurements&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="text">
-         <string>In monitoring prog.</string>
+         <string>Em monitoramento</string>
         </property>
        </widget>
       </item>
@@ -181,7 +181,7 @@ p, li { white-space: pre-wrap; }
          <enum>Qt::RightToLeft</enum>
         </property>
         <property name="text">
-         <string>name</string>
+         <string>nome</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -256,7 +256,7 @@ p, li { white-space: pre-wrap; }
 &lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:8pt;&quot;&gt;equipped with a data logger&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
         </property>
         <property name="text">
-         <string>Equipped w logger</string>
+         <string>Equipado com logger</string>
         </property>
        </widget>
       </item>
@@ -293,7 +293,7 @@ p, li { white-space: pre-wrap; }
          <enum>Qt::RightToLeft</enum>
         </property>
         <property name="text">
-         <string>type</string>
+         <string>tipo</string>
         </property>
         <property name="alignment">
          <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -372,7 +372,7 @@ p, li { white-space: pre-wrap; }
      </property>
      <widget class="QWidget" name="tab">
       <attribute name="title">
-       <string>Level and depth (m)</string>
+       <string>Nível e profundidade (m)</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout">
        <item row="0" column="0">
@@ -408,7 +408,7 @@ p, li { white-space: pre-wrap; }
           <enum>Qt::RightToLeft</enum>
          </property>
          <property name="text">
-          <string>depth</string>
+          <string>profundidade</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -488,7 +488,7 @@ p, li { white-space: pre-wrap; }
           <enum>Qt::RightToLeft</enum>
          </property>
          <property name="text">
-          <string>ground surf.</string>
+          <string>nível solo</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -563,7 +563,7 @@ p, li { white-space: pre-wrap; }
           <enum>Qt::RightToLeft</enum>
          </property>
          <property name="text">
-          <string>TopOfCasing</string>
+          <string>Boca do poço</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -639,7 +639,7 @@ p, li { white-space: pre-wrap; }
           <enum>Qt::RightToLeft</enum>
          </property>
          <property name="text">
-          <string>accuracy</string>
+          <string>precisão</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -795,7 +795,7 @@ p, li { white-space: pre-wrap; }
           <enum>Qt::RightToLeft</enum>
          </property>
          <property name="text">
-          <string>elevation system</string>
+          <string>sistema de elevação</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -870,7 +870,7 @@ p, li { white-space: pre-wrap; }
           </font>
          </property>
          <property name="text">
-          <string>source for elev.</string>
+          <string>fonte dados elev.</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -916,7 +916,7 @@ p, li { white-space: pre-wrap; }
      </widget>
      <widget class="QWidget" name="tab_3">
       <attribute name="title">
-       <string>Position (m)</string>
+       <string>Posição (m)</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_8">
        <item row="0" column="0">
@@ -950,7 +950,7 @@ p, li { white-space: pre-wrap; }
               </font>
              </property>
              <property name="text">
-              <string>Coord.Ref.Sys</string>
+              <string>Sist.ref.coord.</string>
              </property>
              <property name="scaledContents">
               <bool>false</bool>
@@ -1030,7 +1030,7 @@ p, li { white-space: pre-wrap; }
               </font>
              </property>
              <property name="text">
-              <string>east</string>
+              <string>leste</string>
              </property>
              <property name="scaledContents">
               <bool>false</bool>
@@ -1070,7 +1070,7 @@ p, li { white-space: pre-wrap; }
               </font>
              </property>
              <property name="toolTip">
-              <string>eastern coordinate</string>
+              <string>coordenada leste</string>
              </property>
              <property name="layoutDirection">
               <enum>Qt::LeftToRight</enum>
@@ -1107,7 +1107,7 @@ p, li { white-space: pre-wrap; }
               </font>
              </property>
              <property name="text">
-              <string>north</string>
+              <string>norte</string>
              </property>
              <property name="scaledContents">
               <bool>false</bool>
@@ -1147,7 +1147,7 @@ p, li { white-space: pre-wrap; }
               </font>
              </property>
              <property name="toolTip">
-              <string>northern coordinate</string>
+              <string>coordenada norte</string>
              </property>
              <property name="inputMethodHints">
               <set>Qt::ImhNone</set>
@@ -1184,7 +1184,7 @@ p, li { white-space: pre-wrap; }
               </font>
              </property>
              <property name="text">
-              <string>accuracy</string>
+              <string>precisão</string>
              </property>
              <property name="scaledContents">
               <bool>false</bool>
@@ -1221,7 +1221,7 @@ p, li { white-space: pre-wrap; }
               </font>
              </property>
              <property name="toolTip">
-              <string>accuracy for position</string>
+              <string>precisão da posição</string>
              </property>
              <property name="text">
               <string/>
@@ -1255,7 +1255,7 @@ p, li { white-space: pre-wrap; }
               </font>
              </property>
              <property name="text">
-              <string>source for pos</string>
+              <string>fonte da posição</string>
              </property>
              <property name="alignment">
               <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1317,7 +1317,7 @@ p, li { white-space: pre-wrap; }
             <number>0</number>
            </property>
            <property name="text">
-            <string>Note! Select Midvatten-Edit data to update map position from coordinates or vice versa.</string>
+            <string>Nota: Selecione Selecione Midvatten - Editar para atualizar a posição do mapa pelas coordenadas ou vice-versa.</string>
            </property>
            <property name="wordWrap">
             <bool>true</bool>
@@ -1330,7 +1330,7 @@ p, li { white-space: pre-wrap; }
      </widget>
      <widget class="QWidget" name="tab_4">
       <attribute name="title">
-       <string>Construction and Drill info</string>
+       <string>Dados da perfuração</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_5">
        <item row="0" column="0">
@@ -1360,7 +1360,7 @@ p, li { white-space: pre-wrap; }
           </font>
          </property>
          <property name="text">
-          <string>drill date</string>
+          <string>data perfuração</string>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -1432,7 +1432,7 @@ p, li { white-space: pre-wrap; }
           </font>
          </property>
          <property name="text">
-          <string>capacity</string>
+          <string>capacidade</string>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -1588,7 +1588,7 @@ p, li { white-space: pre-wrap; }
           </font>
          </property>
          <property name="text">
-          <string>inner diam.</string>
+          <string>diam. interno</string>
          </property>
          <property name="scaledContents">
           <bool>true</bool>
@@ -1665,7 +1665,7 @@ p, li { white-space: pre-wrap; }
           </font>
          </property>
          <property name="toolTip">
-          <string>Drill stop</string>
+          <string>Parada da perf.</string>
          </property>
          <property name="layoutDirection">
           <enum>Qt::RightToLeft</enum>
@@ -1833,7 +1833,7 @@ p, li { white-space: pre-wrap; }
         <enum>Qt::RightToLeft</enum>
        </property>
        <property name="text">
-        <string>place</string>
+        <string>local</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1902,7 +1902,7 @@ p, li { white-space: pre-wrap; }
         </font>
        </property>
        <property name="text">
-        <string>reference</string>
+        <string>referência</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -1988,7 +1988,7 @@ p, li { white-space: pre-wrap; }
       </font>
      </property>
      <property name="title">
-      <string>Comments (single and multiline)</string>
+      <string>Comentários</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_6">
       <property name="margin">
