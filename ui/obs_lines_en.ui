@@ -17,7 +17,7 @@
    <item row="0" column="0">
     <widget class="QGroupBox" name="groupBox">
      <property name="title">
-      <string>Line of observation</string>
+      <string>Linha de observação</string>
      </property>
      <layout class="QGridLayout" name="gridLayout_4">
       <item row="0" column="0">
@@ -126,7 +126,7 @@
            <enum>Qt::RightToLeft</enum>
           </property>
           <property name="text">
-           <string>obsname</string>
+           <string>nomeobs</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -198,7 +198,7 @@
            <enum>Qt::RightToLeft</enum>
           </property>
           <property name="text">
-           <string>obs type</string>
+           <string>tipo de obs</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -270,7 +270,7 @@
            <enum>Qt::RightToLeft</enum>
           </property>
           <property name="text">
-           <string>place</string>
+           <string>local</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -336,7 +336,7 @@
            </font>
           </property>
           <property name="text">
-           <string>reference</string>
+           <string>referência</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
