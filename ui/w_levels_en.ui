@@ -96,7 +96,7 @@
       </font>
      </property>
      <property name="text">
-      <string>date_time</string>
+      <string>data_hora</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
@@ -130,7 +130,7 @@
       </font>
      </property>
      <property name="text">
-      <string>meas (m)</string>
+      <string>mediç (m)</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
@@ -164,7 +164,7 @@
       </font>
      </property>
      <property name="text">
-      <string>toc (masl)</string>
+      <string>bocapoço (manm)</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
@@ -198,7 +198,7 @@
       </font>
      </property>
      <property name="text">
-      <string>level (masl)</string>
+      <string>nível (manm)</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
@@ -232,7 +232,7 @@
       </font>
      </property>
      <property name="text">
-      <string>comment</string>
+      <string>comentário</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
