@@ -112,7 +112,7 @@
       </font>
      </property>
      <property name="text">
-      <string>date_time</string>
+      <string>data_hora</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -168,7 +168,7 @@
       </font>
      </property>
      <property name="text">
-      <string>meas</string>
+      <string>medi</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -224,7 +224,7 @@
       </font>
      </property>
      <property name="text">
-      <string>level_masl</string>
+      <string>nível_manm</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
