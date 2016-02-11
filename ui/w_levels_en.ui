@@ -130,7 +130,7 @@
       </font>
      </property>
      <property name="text">
-      <string>mediç (m)</string>
+      <string>medi (m)</string>
      </property>
      <property name="alignment">
       <set>Qt::AlignBottom|Qt::AlignLeading|Qt::AlignLeft</set>
