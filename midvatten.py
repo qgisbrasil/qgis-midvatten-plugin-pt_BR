@@ -189,8 +189,8 @@ class midvatten:
         self.action_export_csv.setWhatsThis("Todos dados para os objetos selecionados (obs_points e obs_lines) serão exportados para um conjunto de arquivos csv.")
         QObject.connect(self.action_export_csv, SIGNAL("triggered()"), self.export_csv)
 
-        self.action_export_spatialite = QAction(QIcon(":/plugins/midvatten/icons/export_spatialite.png"), "Export to another spatialite db", self.iface.mainWindow())
-        self.action_export_spatialite.setWhatsThis("All data for the selected objects (obs_points and obs_lines) will be exported to another spatialite db.")
+        self.action_export_spatialite = QAction(QIcon(":/plugins/midvatten/icons/export_spatialite.png"), "Exporta para outra base de dados spatialite", self.iface.mainWindow())
+        self.action_export_spatialite.setWhatsThis("Todos os dados dos objetos selecionados (obs_points e obs_lines) serão exportados para outra BD spatialite.")
         QObject.connect(self.action_export_spatialite, SIGNAL("triggered()"), self.export_spatialite)
 
         # Add toolbar with buttons 
@@ -405,7 +405,7 @@ class midvatten:
             else:
                 OBSID_L = tuple([])
 
-            sanity = utils.askuser("YesNo","""This will create a new empty Midvatten DB with predefined design\nand fill the database with data from selected obs_points and obs_lines.\n\nContinue?""",'Are you sure?')
+            sanity = utils.askuser("YesNo","""Isto criará uma nova base de dados Midvatten vazia com design pré definido\ne completará a base de dados com os dados dos obs_points e obs_lines selecionados.\n\nContinuar?""",'Você tem certeza?')
             if sanity.result == 1:
                 QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))#show the user this may take a long time...
                 obsp_layer = utils.find_layer('obs_points')
@@ -427,14 +427,14 @@ class midvatten:
         allcritical_layers = ('obs_lines')#none of these layers must be in editing mode
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms, allcritical_layers)#verify midv settings are loaded and the critical layers are not in editing mode
         if err_flag == 0:        # unless none of the critical layers are in editing mode
-            sanity = utils.askuser("YesNo","""You are about to import observation lines data, from a text file which must have one header row and 6 columns (see plugin web page for further explanation):\nWKT;obsid;name;place;type;source\n\nPlease note that:\nThere must be WKT geometries of type LINESTRING in the first column.\nThe LINESTRING geometries must correspond to SRID in the dataabse.\nThe file must be either comma, or semicolon-separated.\nDecimal separator must be point (.)\nComma or semicolon is not allowed in string fields.\nEmpty or null values are not allowed for obsid and there must not be any duplicates of obsid\n\nContinue?""",'Are you sure?')
+            sanity = utils.askuser("YesNo","""Você está prestes a importar dados de linhas de observação de um arquivo de texto que deve conter uma linha de cabeçalho e 6 colunas (veja a página da web do plugin para explicações):\nWKT;obsid;nome;lugar;tipo;fonte\n\nNote que:\nDeve haver geometrias WKT do tipo LINESTRING na primeira coluna.\nA LINESTRING deve corresponder ao SRID na base de dados\nO arquivo deve ser separado por vírgula ou ponto-vírgula.\nSeparados decimal deve ser ponto (.)\nVírgula ou ponto-vírgula não é permitido nos campos de texto.\nCampos vazios ou nulos não são permitidos para obsid e não devem haver obsid duplicados\n\nContinuar?""",'Você tem certeza?')
             #utils.pop_up_info(sanity.result)   #debugging
             if sanity.result == 1:
                 from import_data_to_db import midv_data_importer
                 importinstance = midv_data_importer()
                 importinstance.obslines_import()
                 if importinstance.status=='True': 
-                    self.iface.messageBar().pushMessage("Info","%s observation lines were imported to the database."%str(importinstance.recsafter - importinstance.recsbefore), 0)
+                    self.iface.messageBar().pushMessage("Info","%s linhas de observação foram importadas para a base de dados."%str(importinstance.recsafter - importinstance.recsbefore), 0)
                     try:
                         self.midvsettingsdialog.ClearEverything()
                         self.midvsettingsdialog.LoadAndSelectLastSettings()
@@ -445,7 +445,7 @@ class midvatten:
         allcritical_layers = ('obs_points')#none of these layers must be in editing mode
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms, allcritical_layers)#verify midv settings are loaded and the critical layers are not in editing mode
         if err_flag == 0:        # unless none of the critical layers are in editing mode
-            sanity = utils.askuser("YesNo","""You are about to import observation points data, from a text file which must have one header row and 26 columns (see plugin web page for further explanation):\n\n1. obsid, 2. name, 3. place, 4. type, 5. length, 6. drillstop, 7. diam, 8. material, 9. screen, 10. capacity, 11. drilldate, 12. wmeas_yn, 13. wlogg_yn, 14. east, 15. north, 16. ne_accur, 17. ne_source, 18. h_toc, 19. h_tocags, 20. h_gs, 21. h_accur, 22. h_syst, 23. h_source, 24. source, 25. com_onerow, 26. com_html\n\nPlease note that:\nThe file must be either comma, or semicolon-separated.\nDecimal separator must be point (.)\nComma or semicolon is not allowed in string fields.\nEmpty or null values are not allowed for obsid and there must not be any duplicates of obsid.\nEast and north values must correspond to the database SRID.\n\nContinue?""",'Are you sure?')
+            sanity = utils.askuser("YesNo","""Você está prestes a importar dados de pontos de observação de um arquivo de texto que deve conter uma linha de cabeçalho e 26 colunas (veja a página da web do plugin para explicações):\n\n1. obsid, 2. nome, 3. lugar, 4. tipo, 5. comprimento, 6. drillstop, 7. diam, 8. material, 9. screen, 10. capacidade, 11. data, 12. wmeas_yn, 13. wlogg_yn, 14. leste, 15. norte, 16. ne_accur, 17. ne_source, 18. a_bdp, 19. h_tocags, 20. h_gs, 21. a_acur, 22. a_syst, 23. a_fonte, 24. fonte, 25. com_onerow, 26. com_html\n\nNote que:\nO arquivo deve ser separado por vírgula ou ponto-vírgula.\nO separador decimal deve ser ponto (.)\nVírgula ou ponto-vírgula não é permitido nos campos de texto.\nCampos vazios ou nulos não são permitidos para obsid e não devem haver obsid duplicados\nCoordenados leste e norte devem corresponder ao SRID da base de dados.\n\nContinuar?""",'Você tem certeza?')
             #utils.pop_up_info(sanity.result)   #debugging
             if sanity.result == 1:
                 from import_data_to_db import midv_data_importer
@@ -454,7 +454,7 @@ class midvatten:
                 #utils.pop_up_info(returnvalue) #debugging
                 #utils.pop_up_info(importinstance.status) #debugging
                 if importinstance.status=='True':      # 
-                    utils.pop_up_info("%s observation points were imported to the database.\nTo display the imported points on map, select them in\nthe obs_points attribute table then update map position:\nMidvatten - Edit data in database - Update map position from coordinates"%str(importinstance.recsafter - importinstance.recsbefore))
+                    utils.pop_up_info("%s pontos de observação foram importados para a base de dados.\nPara mostrar os pontos importados no mapa, selecione-os na\ntabela de atributos obs_points e então atualize a posição do mapa:\nMidvatten - Editar dados na base de dados - Atualizar a posição do mapa pelas coordenadas"%str(importinstance.recsafter - importinstance.recsbefore))
                     #self.iface.messageBar().pushMessage("Info","%s observation points were imported to the database.\nTo display the imported points on map, select them in\nthe obs_points attribute table then update map position:\nMidvatten - Edit data in database - Update map position from coordinates"%str(importinstance.recsafter - importinstance.recsbefore), 0)                    
                     try:
                         self.midvsettingsdialog.ClearEverything()
