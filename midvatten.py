@@ -466,13 +466,13 @@ class midvatten:
         allcritical_layers = ('obs_lines', 'seismic_data')#none of these layers must be in editing mode
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms, allcritical_layers)#verify midv settings are loaded and the critical layers are not in editing mode
         if err_flag == 0: 
-            sanity = utils.askuser("YesNo","""You are about to import interpreted seismic data, from a text file which must have one header row and 6 columns:\n\nobsid, length, ground, bedrock, gw_table, comment\n\nPlease note that:\nThe file must be either comma, or semicolon-separated.\nDecimal separator must be point (.)\nEmpty or null values are not allowed for obsid or length.\nEach combination of obsid and length must be unique.\n\nContinue?""",'Are you sure?')
+            sanity = utils.askuser("YesNo","""Você está prestes a importar dados sísmicos interpretados de um arquivo de texto que deve conter uma linha de cabeçalho e 6 colunas:\n\nobsid, comprimento, ground, embasamento, gw_table, comentário\n\nNote que:\nO arquivo deve ser separado por vírgula ou ponto e vírgula.\nO separador decimal deve ser ponto (.)\nCampo vazio ou nulo não é permitido para obsid ou comprimento.\nCada combinação de obsid e comprimento deve ser única.\n\nContinuar?""",'Você tem certeza?')
             if sanity.result == 1:
                 from import_data_to_db import midv_data_importer
                 importinstance = midv_data_importer()
                 importinstance.seismics_import()
                 if importinstance.status=='True':  
-                    self.iface.messageBar().pushMessage("Info","%s interpreted seismic data values were imported to the database"%str(importinstance.recsafter - importinstance.recsbefore), 0)
+                    self.iface.messageBar().pushMessage("Info","%s dados sísmicos interpretados foram importados para a base de dados"%str(importinstance.recsafter - importinstance.recsbefore), 0)
                     try:
                         self.midvsettingsdialog.ClearEverything()
                         self.midvsettingsdialog.LoadAndSelectLastSettings()
@@ -483,13 +483,13 @@ class midvatten:
         allcritical_layers = ('obs_points', 'stratigraphy')#none of these layers must be in editing mode
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms, allcritical_layers)#verify midv settings are loaded and the critical layers are not in editing mode
         if err_flag == 0:        # unless none of the critical layers are in editing mode
-            sanity = utils.askuser("YesNo","""You are about to import stratigraphy data, from a text file which must have one header row and 9 columns:\n1. obsid\n2. stratid - integer starting from ground surface and increasing downwards\n3. depth_top - depth to top of stratigraphy layer\n4. depth_bot - depth to bottom of stratigraphy layer\n5. geology - full description of layer geology\n6. geoshort - shortname for layer geology (see dicionary)\n7. capacity\n8. development - well development\n9. comment\n\nPlease note that:\nThe file must be either comma, or semicolon-separated.\nDecimal separator must be point (.)\nComma or semicolon is not allowed in the comments.\nEmpty or null values are not allowed for obsid or stratid, such rows will be excluded from the import.\nEach combination of obsid and stratid must be unique.\n\nContinue?""",'Are you sure?')
+            sanity = utils.askuser("YesNo","""Você está prestes a importar dados estratigráficos de um arquivo de texto que deve conter uma linha de cabeçalho e 9 colunas:\n1. obsid\n2. stratid - número inteiro começando pela superfície e aumentando com a profundidade\n3. profundidade_topo - profundidade até o topo da camada\n4. profundidade_base - profundidade até a base da camada\n5. geologia - descrição completa da geologia da camada\n6. geoabrev - abreviação para a geologia da camada (ver dicionário)\n7. capacidade\n8. development - well development\n9. comentário\n\nNote que:\nO arquivo deve ser separado por vírgula ou ponto e vírgula.\nO separador decimal deve ser ponto (.)\nVírgula e ponto e vírgula não são permitidos nos comentários.\nCampos vazios ou nulos não são permitidos para obsid e stratid, tais campos serão excluídos da importação.\nCada combinação de obsid e stratid deve ser única.\n\nContinuar?""",'Você tem certeza?')
             if sanity.result == 1:
                 from import_data_to_db import midv_data_importer
                 importinstance = midv_data_importer()
                 importinstance.strat_import()
                 if importinstance.status=='True':      # 
-                    self.iface.messageBar().pushMessage("Info","%s stratigraphy layers were imported to the database"%str(importinstance.recsafter - importinstance.recsbefore), 0)
+                    self.iface.messageBar().pushMessage("Info","%s camadas estratigráficas foram importadas para a base de dados"%str(importinstance.recsafter - importinstance.recsbefore), 0)
                     try:
                         self.midvsettingsdialog.ClearEverything()
                         self.midvsettingsdialog.LoadAndSelectLastSettings()
