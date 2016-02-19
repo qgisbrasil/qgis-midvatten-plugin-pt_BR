@@ -621,13 +621,13 @@ class midvatten:
             self.iface.messageBar().pushMessage("Erro","Não há tabela para dados metereológicos em sua base de dados! Sua base de dados deve ter sido criada em uma versão anterior do plugin Midvatten",2,duration=15)
         
         if err_flag == 0:        # unless none of the critical layers are in editing mode or the database is so old no meteo table exist
-            sanity = utils.askuser("YesNo","""You are about to import meteorological data from, from a text file which must have one header row and 8 columns:\n\n"obsid", "instrumentid", "parameter", "date_time", "reading_num", "reading_txt", "unit", "comment"\n\nPlease note that:\nThe file must be either comma, or semicolon-separated.\ndate_time must be of format 'yyyy-mm-dd hh:mm(:ss)'.\nDecimal separator must be point (.)\nComma or semicolon is not allowed in the comments.\nBe sure to use a limited number of parameters since all new parameters will silently be added to the database table zz_meteoparam during import.\nEmpty or null values are not allowed for obsid, instrumentid, parameter or date_time.\nEach combination of obsid, instrumentid, parameter and date_time must be unique.\n\nContinue?""",'Are you sure?')
+            sanity = utils.askuser("YesNo","""Você está prestes a importar dados metereológicos de um arquivo de texto que deve conter uma linha de cabeçalho e 8 colunas:\n\n"obsid", "instrumentid", "parâmetro", "data_hora", "leitura_num", "leitura_txt", "unidade", "comentário"\n\nNote que:\nO arquivo deve ser separado por vírgula ou ponto e vírgula.\ndata_hora deve ser no formato 'aaaa-mm-dd hh:mm(:ss)'.\nO separador decimal deve ser ponto (.)\nVírgula e ponto e vírgula não são permitidos nos comentários.\nCertifique-se de usar um número limitado de parâmetros, pois todos serão adicionados à tabela zz_meteoparam na base de dados durante a importação.\nCampos vazios ou nulos não são permitidos para obsid, instrumentid, parâmetro ou data_hora.\nCada combinação de obsid, instrumentid, parâmetro e data_hora deve ser única.\n\nContinuar?""",'Você tem certeza?')
             if sanity.result == 1:
                 from import_data_to_db import midv_data_importer
                 importinstance = midv_data_importer()
                 importinstance.meteo_import()
                 if importinstance.status=='True': 
-                    self.iface.messageBar().pushMessage("Info","%s meteorological readings were imported to the database"%str(importinstance.recsafter - importinstance.recsbefore), 0)
+                    self.iface.messageBar().pushMessage("Info","%s leituras metereológicas foram importadas para a base de dados"%str(importinstance.recsafter - importinstance.recsbefore), 0)
                     try:
                         self.midvsettingsdialog.ClearEverything()
                         self.midvsettingsdialog.LoadAndSelectLastSettings()
@@ -637,7 +637,7 @@ class midvatten:
     def loadthelayers(self):
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms)#verify midv settings are loaded
         if err_flag == 0:
-            sanity = utils.askuser("YesNo","""This operation will load default layers ( with predefined layout, edit forms etc.) from your selected database to your qgis project.\n\nIf any default Midvatten DB layers already are loaded into your qgis project, then those layers first will be removed from your qgis project.\n\nProceed?""",'Warning!')
+            sanity = utils.askuser("YesNo","""Esta operação irá carregar as camadas padrão (com layout e símbolos pré-definidos, etc.) da sua base de dados selecionada para o seu projeto qgis.\n\nSe qualquer camada padrão Midvatten já estiver carregada em seu projeto qgis, elas serão excluídas.\n\nContinuar?""",'Atenção!')
             if sanity.result == 1:
                 #show the user this may take a long time...
                 QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
@@ -645,7 +645,7 @@ class midvatten:
                 QApplication.restoreOverrideCursor()#now this long process is done and the cursor is back as normal
 
     def new_db(self): 
-        sanity = utils.askuser("YesNo","""This will create a new empty\nMidvatten DB with predefined design.\n\nContinue?""",'Are you sure?')
+        sanity = utils.askuser("YesNo","""Isto criará uma nova BD Midvatten\ncom design pré-definido.\n\nContinuar?""",'Você tem certeza?')
         if sanity.result == 1:
             filenamepath = os.path.join(os.path.dirname(__file__),"metadata.txt" )
             iniText = QSettings(filenamepath , QSettings.IniFormat)
@@ -669,7 +669,7 @@ class midvatten:
         err_flag = utils.verify_layer_selection(err_flag,0)#verify the selected layer has attribute "obsid" and that some features are selected
         if (self.ms.settingsdict['tstable'] =='' or self.ms.settingsdict['tscolumn'] == ''):
             err_flag += 1
-            self.iface.messageBar().pushMessage("Error","Please set time series table and column in Midvatten settings.", 2,duration =15)
+            self.iface.messageBar().pushMessage("Erro","Por favor, configure a tabela série temporal e coluna nas configurações Midvatten.", 2,duration =15)
         if err_flag == 0:
             dlg = TimeSeriesPlot(qgis.utils.iface.activeLayer(), self.ms.settingsdict)
 
@@ -678,7 +678,7 @@ class midvatten:
         err_flag = utils.verify_layer_selection(err_flag,0)#verify the selected layer has attribute "obsid" and that some features are selected
         if self.ms.settingsdict['stratigraphytable']=='':
             err_flag += 1
-            self.iface.messageBar().pushMessage("Error","Please set stratigraphy table in Midvatten settings.", 2,duration =15)
+            self.iface.messageBar().pushMessage("Erro","Por favor, configura a tabela estratigrafia nas configurações Midvatten.", 2,duration =15)
         if err_flag == 0 and utils.strat_selection_check(qgis.utils.iface.activeLayer()) == 'ok':
             dlg = Stratigraphy(self.iface, qgis.utils.iface.activeLayer(), self.ms.settingsdict)
             dlg.showSurvey()
@@ -688,7 +688,7 @@ class midvatten:
         all_critical_layers=('obs_points')
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms, all_critical_layers)#verify midv settings are loaded
         if not(err_flag == 0):
-            self.iface.messageBar().pushMessage("Error","Verify Midvatten settings and make sure 'obs_points' layer is not in editing mode.", 2, duration=10)
+            self.iface.messageBar().pushMessage("Erro","Verifique as configurações Midvatten e certifique-se que a camada 'obs_points' não está no modo editar.", 2, duration=10)
             return
 
         SectionLineLayer = qgis.utils.iface.mapCanvas().currentLayer()#MUST BE LINE VECTOR LAYER WITH SAME EPSG as MIDV_OBSDB AND THERE MUST BE ONLY ONE SELECTED FEATURE
@@ -699,9 +699,9 @@ class midvatten:
                 if geom.wkbType() == QGis.WKBLineString:#...and that the active layer is a line vector layer
                     pass
                 else:
-                    msg = 'You must activate the vector line layer that defines the section.'
+                    msg = 'Você deve ativar a camada vetor (linha) que define a seção.'
         else:
-            msg = 'You must activate the vector line layer and select exactly one feature that defines the section'
+            msg = 'Você deve ativar a camada vetor (linha) e selecionar exatamente uma feição que define a seção'
         
         #Then verify that at least two feature is selected in obs_points layer, and get a list (OBSID) of selected obs_points
         obs_points_layer = utils.find_layer('obs_points')
@@ -714,7 +714,7 @@ class midvatten:
                 i+=1
             OBSID = tuple(obsidlist)#because module sectionplot depends on obsid being a tuple
         else:
-            msg = 'You must select at least two objects in the obs_points layer'
+            msg = 'Você deve selecionar pelo menos dois objetos na camada obs_points'
         
         if msg:#if something went wrong
             self.iface.messageBar().pushMessage("Error",msg, 2,duration =15)
@@ -730,7 +730,7 @@ class midvatten:
         err_flag = utils.verify_layer_selection(err_flag,0)#verify the selected layer has attribute "obsid" and that some features are selected
         if (self.ms.settingsdict['xytable'] =='' or self.ms.settingsdict['xy_xcolumn'] == '' or (self.ms.settingsdict['xy_y1column'] == '' and self.ms.settingsdict['xy_y2column'] == '' and self.ms.settingsdict['xy_y3column'] == '')):
             err_flag += 1
-            self.iface.messageBar().pushMessage("Error","Please set xy series table and columns in Midvatten settings.", 2,duration =15)
+            self.iface.messageBar().pushMessage("Erro","Por favor, configure a tabela xy series e colunas nas configurações Midvatten.", 2,duration =15)
         if err_flag == 0:
             dlg = XYPlot(qgis.utils.iface.activeLayer(), self.ms.settingsdict)
 
@@ -785,9 +785,9 @@ class midvatten:
         layername = 'obs_points'
         err_flag = utils.verify_this_layer_selected_and_not_in_edit_mode(err_flag, layername)
         if err_flag == 0:
-            sanity = utils.askuser("AllSelected","""Do you want to update coordinates\nfor All or Selected objects?""")
+            sanity = utils.askuser("TodosSelecionados","""Você quer atualizar as coordenadas\npara Todos ou apenas objetos Selecionados?""")
             if sanity.result == 0:  #IF USER WANT ALL OBJECTS TO BE UPDATED
-                sanity = utils.askuser("YesNo","""Sanity check! This will alter the database.\nCoordinates will be written in fields east and north\nfor ALL objects in the obs_points table.\nProceed?""")
+                sanity = utils.askuser("YesNo","""Sanity check! Isto irá alterar a base de dados.\nAs coordenadas serão adicionadas nos campos leste e norte\npara TODOS objetos na tabela obs_points.\nContinuar?""")
                 if sanity.result==1:
                     ALL_OBS = utils.sql_load_fr_db("select distinct obsid from obs_points")[1]#a list of unicode strings is returned
                     observations = [None]*len(ALL_OBS)
@@ -798,7 +798,7 @@ class midvatten:
                     from coords_and_position import updatecoordinates
                     updatecoordinates(observations)
             elif sanity.result == 1:    #IF USER WANT ONLY SELECTED OBJECTS TO BE UPDATED
-                sanity = utils.askuser("YesNo","""Sanity check! This will alter the database.\nCoordinates will be written in fields east and north\nfor SELECTED objects in the obs_points table.\nProceed?""")
+                sanity = utils.askuser("YesNo","""Sanity check! Isto irá alterar a base de dados.\nAs coordenadas serão adicionadas nos campos leste e norte\npara os objetos SELECIONADOS na tabela obs_points.\nContinuar?""")
                 if sanity.result==1:
                     layer = self.iface.activeLayer()
                     if utils.selection_check(layer) == 'ok':    #Checks that there are some objects selected at all!
@@ -813,9 +813,9 @@ class midvatten:
         err_flag = utils.verify_this_layer_selected_and_not_in_edit_mode(err_flag, layername)
         if err_flag == 0:
             layer = self.iface.activeLayer()
-            sanity = utils.askuser("AllSelected","""Do you want to update position\nfor All or Selected objects?""")
+            sanity = utils.askuser("TodosSelecionados","""Você quer atualizar a posição\npara TODOS objetos ou apenas Selecionados?""")
             if sanity.result == 0:      #IF USER WANT ALL OBJECTS TO BE UPDATED
-                sanity = utils.askuser("YesNo","""Sanity check! This will alter the database.\nALL objects in obs_points will be moved to positions\ngiven by their coordinates in fields east and north.\nProceed?""")
+                sanity = utils.askuser("YesNo","""Sanity check! Isto irá alterar a base de dados\nTODOS objetos em obs_points serão movidos para a posição\ndada pelas coordenadas nos campos leste e norte.\nContinuar?""")
                 if sanity.result==1:
                     ALL_OBS = utils.sql_load_fr_db("select distinct obsid from obs_points")[1]
                     observations = [None]*len(ALL_OBS)
@@ -827,7 +827,7 @@ class midvatten:
                     updateposition(observations)
                     layer.updateExtents()
             elif sanity.result == 1:    #IF USER WANT ONLY SELECTED OBJECTS TO BE UPDATED
-                sanity = utils.askuser("YesNo","""Sanity check! This will alter the database.\nSELECTED objects in obs_points will be moved to positions\ngiven by their coordinates in fields east and north.\nProceed?""")
+                sanity = utils.askuser("YesNo","""Sanity check! Isto irá alterar a base de dados.\nObjetos selecionados em obs_points serão movidos para a posição\ndada pelas coordenadas nos campos leste e norte.\nContinuar?""")
                 if sanity.result==1:
                     if utils.selection_check(layer) == 'ok':    #Checks that there are some objects selected at all!
                         observations = utils.getselectedobjectnames(layer)
@@ -852,7 +852,7 @@ class midvatten:
             fail = 0
             for k in utils.getselectedobjectnames(qgis.utils.iface.activeLayer()):#all selected objects
                 if not utils.sql_load_fr_db("select obsid from %s where obsid = '%s'"%(self.ms.settingsdict['wqualtable'],str(k)))[1]:#if there is a selected object without water quality data
-                    self.iface.messageBar().pushMessage("Error","No water quality data for %s"%str(k), 2)
+                    self.iface.messageBar().pushMessage("Erro","Sem dados de qualidade da água para %s"%str(k), 2)
                     fail = 1
             if not fail == 1:#only if all objects has data
                 wqualreport(qgis.utils.iface.activeLayer(),self.ms.settingsdict)#TEMPORARY FOR GVAB
