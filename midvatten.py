@@ -466,7 +466,7 @@ class midvatten:
         allcritical_layers = ('obs_lines', 'seismic_data')#none of these layers must be in editing mode
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms, allcritical_layers)#verify midv settings are loaded and the critical layers are not in editing mode
         if err_flag == 0: 
-            sanity = utils.askuser("YesNo","""Voce esta prestes a importar dados sismicos interpretados de um arquivo de texto que deve conter uma linha de cabecalho e 6 colunas:\n\nobsid, comprimento, ground, embasamento, gw_table, comentario\n\nNote que:\nO arquivo deve ser separado por virgula ou ponto e virgula.\nO separador decimal deve ser ponto (.)\nCampo vazio ou nulo nao é permitido para obsid ou comprimento.\nCada combinacao de obsid e comprimento deve ser unica.\n\nContinuar?""",'Voce tem certeza?')
+            sanity = utils.askuser("YesNo","""Voce esta prestes a importar dados sismicos interpretados de um arquivo de texto que deve conter uma linha de cabecalho e 6 colunas:\n\nobsid, comprimento, ground, embasamento, gw_table, comentario\n\nNote que:\nO arquivo deve ser separado por virgula ou ponto e virgula.\nO separador decimal deve ser ponto (.)\nCampo vazio ou nulo nao e permitido para obsid ou comprimento.\nCada combinacao de obsid e comprimento deve ser unica.\n\nContinuar?""",'Voce tem certeza?')
             if sanity.result == 1:
                 from import_data_to_db import midv_data_importer
                 importinstance = midv_data_importer()
@@ -678,7 +678,7 @@ class midvatten:
         err_flag = utils.verify_layer_selection(err_flag,0)#verify the selected layer has attribute "obsid" and that some features are selected
         if self.ms.settingsdict['stratigraphytable']=='':
             err_flag += 1
-            self.iface.messageBar().pushMessage("Erro","Por favor, configure a tabela estratigrafia nas configurações Midvatten.", 2,duration =15)
+            self.iface.messageBar().pushMessage("Erro","Por favor, configure a tabela estratigrafia nas configuracoes Midvatten.", 2,duration =15)
         if err_flag == 0 and utils.strat_selection_check(qgis.utils.iface.activeLayer()) == 'ok':
             dlg = Stratigraphy(self.iface, qgis.utils.iface.activeLayer(), self.ms.settingsdict)
             dlg.showSurvey()
@@ -847,7 +847,7 @@ class midvatten:
         err_flag = utils.verify_layer_selection(err_flag)#verify the selected layer has attribute "obsid" and that some feature(s) is selected
         if self.ms.settingsdict['database'] == '' or self.ms.settingsdict['wqualtable']=='' or self.ms.settingsdict['wqual_paramcolumn']=='' or self.ms.settingsdict['wqual_valuecolumn']=='':
             err_flag += 1
-            self.iface.messageBar().pushMessage("Erro","Cheque as configurações Midvatten \nAlgo esta errado na aba 'W quality report'!", 2,duration =15)
+            self.iface.messageBar().pushMessage("Erro","Cheque as configuracoes Midvatten. \nAlgo esta errado na aba 'W quality report'!", 2,duration =15)
         if err_flag == 0:
             fail = 0
             for k in utils.getselectedobjectnames(qgis.utils.iface.activeLayer()):#all selected objects
