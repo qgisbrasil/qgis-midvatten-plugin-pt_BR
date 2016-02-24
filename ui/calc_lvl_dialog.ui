@@ -67,10 +67,10 @@
         </font>
        </property>
        <property name="text">
-        <string>Níveis de água (em metros acima do nível do mar) serão calculados como:
+        <string>Niveis de agua (em metros acima do nivel do mar) serao calculados como:
 
 obs_points.h_toc - w_levels.meas
-(Boca do poço - Medição)</string>
+(Boca do poco - Leitura)</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -159,7 +159,7 @@ obs_points.h_toc - w_levels.meas
         </font>
        </property>
        <property name="text">
-        <string>Até:</string>
+        <string>Ate:</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -321,7 +321,7 @@ obs_points.h_toc - w_levels.meas
         </font>
        </property>
        <property name="text">
-        <string>Você deseja que a tabela 'w_levels' seja atualizada para
+        <string>Voce deseja que a tabela 'w_levels' seja atualizada para
  +todos objetos ou apenas selecionados?</string>
        </property>
        <property name="wordWrap">
