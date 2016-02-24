@@ -11,7 +11,7 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Custom plot generator for Midvatten plugin</string>
+   <string>Gerador de grafico customizado para Midvatten plugin</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QGridLayout" name="gridLayout_3">
@@ -103,8 +103,8 @@
          </font>
         </property>
         <property name="text">
-         <string>Calibration is performed by giving logger position and date-time interval.
-Please note that this will change the database.</string>
+         <string>A calibragem e feita dando-se a posicao do logger e o intervalo de data-hora.
+Note que isso ira modificar a base de dados.</string>
         </property>
         <property name="wordWrap">
          <bool>true</bool>
@@ -126,7 +126,7 @@ Please note that this will change the database.</string>
          </font>
         </property>
         <property name="text">
-         <string>TextLabel</string>
+         <string>TextoRotulo</string>
         </property>
         <property name="wordWrap">
          <bool>true</bool>
@@ -169,7 +169,7 @@ Please note that this will change the database.</string>
            </font>
           </property>
           <property name="text">
-           <string>From:</string>
+           <string>De:</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -244,7 +244,7 @@ Please note that this will change the database.</string>
            </font>
           </property>
           <property name="text">
-           <string>To:</string>
+           <string>Ate:</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -313,8 +313,8 @@ Please note that this will change the database.</string>
            </font>
           </property>
           <property name="text">
-           <string>Logger position, masl
-(empty=no calibr., just plot):</string>
+           <string>Posicao Logger , manm
+(vazio=sem calibr., apenas plotagem):</string>
           </property>
           <property name="wordWrap">
            <bool>true</bool>
@@ -363,7 +363,7 @@ Please note that this will change the database.</string>
          </font>
         </property>
         <property name="text">
-         <string>Calibrate</string>
+         <string>Calibrar</string>
         </property>
        </widget>
       </item>
