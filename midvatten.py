@@ -114,7 +114,7 @@ class midvatten:
         self.action_import_wlvllogg = QAction(QIcon(":/plugins/midvatten/icons/load_wlevels_logger.png"), "Importar nivel de agua pelo logger", self.iface.mainWindow())
         QObject.connect(self.action_import_wlvllogg , SIGNAL("triggered()"), self.import_wlvllogg)
         
-        self.action_wlvlloggcalibrate = QAction(QIcon(":/plugins/midvatten/icons/calibr_level_logger_masl.png"), "Calibrar nível de agua pelo logger", self.iface.mainWindow())
+        self.action_wlvlloggcalibrate = QAction(QIcon(":/plugins/midvatten/icons/calibr_level_logger_masl.png"), "Calibrar nivel de agua pelo logger", self.iface.mainWindow())
         QObject.connect(self.action_wlvlloggcalibrate , SIGNAL("triggered()"), self.wlvlloggcalibrate)
 
         self.actionimport_wqual_lab = QAction(QIcon(":/plugins/midvatten/icons/import_wqual_lab.png"), "Importar dados de lab. de qual. agua", self.iface.mainWindow())
