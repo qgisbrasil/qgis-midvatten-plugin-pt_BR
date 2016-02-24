@@ -67,9 +67,9 @@
         </font>
        </property>
        <property name="text">
-        <string>Fluxo médio (l/s) está prestes a ser calculado e armazenado na tabela w_flow (parameter='Aveflow'). Para o cálculo, todos valores acumulados ('Accvol') estão adotados para serem expressos em m3. Qualquer valores de 'Aveflow' ser]ap mantidos sem modificação e dessa maneira, apenas valores qua ainda não estão presentes na base de dados serão adicionados.
+        <string>Fluxo medio (l/s) esta prestes a ser calculado e armazenado na tabela w_flow (parameter='Aveflow'). Para o calculo, todos valores acumulados ('Accvol') estao adotados para serem expressos em m3. Qualquer valores de 'Aveflow' serao mantidos sem modificacao e dessa maneira, apenas valores qua ainda nao estao presentes na base de dados serao adicionados.
 
-Aveflow é calculado para observações Accvol dentro deste intervalo:</string>
+Aveflow é calculado para observacoes Accvol dentro deste intervalo:</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -324,7 +324,7 @@ Aveflow é calculado para observações Accvol dentro deste intervalo:</string>
         </font>
        </property>
        <property name="text">
-        <string>'Aveflow' deve ser calculado para todos objetos ou apenas selecionados? (A questão refere-se apenas aos pontos (obsid). 'Aveflow' será sempre calculado para todos 'instrumentids' dos pontos selecionados.)</string>
+        <string>'Aveflow' deve ser calculado para todos objetos ou apenas selecionados? (A questao refere-se apenas aos pontos (obsid). 'Aveflow' sera sempre calculado para todos 'instrumentids' dos pontos selecionados.)</string>
        </property>
        <property name="wordWrap">
         <bool>true</bool>
