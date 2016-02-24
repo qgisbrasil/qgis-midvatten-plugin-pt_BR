@@ -209,7 +209,7 @@ class midvatten:
         
         # Add plugins menu items
         self.menu = QMenu("Midvatten")
-        self.menu.import_data_menu = QMenu(QCoreApplication.translate("Midvatten", "&Import data to database"))
+        self.menu.import_data_menu = QMenu(QCoreApplication.translate("Midvatten", "&Importar dados para a base de dados"))
         #self.iface.addPluginToMenu("&Midvatten", self.menu.add_data_menu.menuAction())
         self.menu.addMenu(self.menu.import_data_menu)
         self.menu.import_data_menu.addAction(self.actionimport_obs_points)   
@@ -224,12 +224,12 @@ class midvatten:
         self.menu.import_data_menu.addAction(self.action_import_seismics)   
         self.menu.import_data_menu.addAction(self.action_import_vlf)   
 
-        self.menu.export_data_menu = QMenu(QCoreApplication.translate("Midvatten", "&Export data from database"))
+        self.menu.export_data_menu = QMenu(QCoreApplication.translate("Midvatten", "&Exportar dados da base de dados"))
         self.menu.addMenu(self.menu.export_data_menu)
         self.menu.export_data_menu.addAction(self.action_export_csv)   
         self.menu.export_data_menu.addAction(self.action_export_spatialite)   
         
-        self.menu.add_data_menu = QMenu(QCoreApplication.translate("Midvatten", "&Edit data in database"))
+        self.menu.add_data_menu = QMenu(QCoreApplication.translate("Midvatten", "&Editar base de dados"))
         #self.iface.addPluginToMenu("&Midvatten", self.menu.add_data_menu.menuAction())
         self.menu.addMenu(self.menu.add_data_menu)
         self.menu.add_data_menu.addAction(self.action_wlvlcalculate)   
@@ -238,7 +238,7 @@ class midvatten:
         self.menu.add_data_menu.addAction(self.actionupdateposition)   
         self.menu.add_data_menu.addAction(self.action_aveflowcalculate)   
 
-        self.menu.plot_data_menu = QMenu(QCoreApplication.translate("Midvatten", "&View plot"))
+        self.menu.plot_data_menu = QMenu(QCoreApplication.translate("Midvatten", "&Gerar graficos"))
         #self.iface.addPluginToMenu("&Midvatten", self.menu.plot_data_menu.menuAction())
         self.menu.addMenu(self.menu.plot_data_menu)
         self.menu.plot_data_menu.addAction(self.actionPlotTS) 
@@ -248,17 +248,17 @@ class midvatten:
         self.menu.plot_data_menu.addAction(self.actionPlotSQLite)
         self.menu.plot_data_menu.addAction(self.actionPlotPiper)
 
-        self.menu.report_menu = QMenu(QCoreApplication.translate("Midvatten", "&View report"))
+        self.menu.report_menu = QMenu(QCoreApplication.translate("Midvatten", "&Gerar relatorios"))
         self.menu.addMenu(self.menu.report_menu)
         self.menu.report_menu.addAction(self.actiondrillreport)
         self.menu.report_menu.addAction(self.actionwqualreport)
 
 
-        self.menu.prepare_menu = QMenu(QCoreApplication.translate("Midvatten", "&Prepare 3D data"))
+        self.menu.prepare_menu = QMenu(QCoreApplication.translate("Midvatten", "&Preparar dados 3D"))
         self.menu.addMenu(self.menu.prepare_menu)
         self.menu.prepare_menu.addAction(self.actionPrepareFor2Qgis2ThreeJS)
         
-        self.menu.db_manage_menu = QMenu(QCoreApplication.translate("Midvatten", "&Database management"))
+        self.menu.db_manage_menu = QMenu(QCoreApplication.translate("Midvatten", "&Gerenciar base de dados"))
         self.menu.addMenu(self.menu.db_manage_menu)
         self.menu.db_manage_menu.addAction(self.actionNewDB)
         self.menu.db_manage_menu.addAction(self.actionVacuumDB)
@@ -445,7 +445,7 @@ class midvatten:
         allcritical_layers = ('obs_points')#none of these layers must be in editing mode
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms, allcritical_layers)#verify midv settings are loaded and the critical layers are not in editing mode
         if err_flag == 0:        # unless none of the critical layers are in editing mode
-            sanity = utils.askuser("YesNo","""Você está prestes a importar dados de pontos de observação de um arquivo de texto que deve conter uma linha de cabeçalho e 26 colunas (veja a página da web do plugin para explicações):\n\n1. obsid, 2. nome, 3. lugar, 4. tipo, 5. comprimento, 6. drillstop, 7. diam, 8. material, 9. screen, 10. capacidade, 11. data, 12. wmeas_yn, 13. wlogg_yn, 14. leste, 15. norte, 16. ne_accur, 17. ne_source, 18. a_bdp, 19. h_tocags, 20. h_gs, 21. a_acur, 22. a_syst, 23. a_fonte, 24. fonte, 25. com_onerow, 26. com_html\n\nNote que:\nO arquivo deve ser separado por vírgula ou ponto-vírgula.\nO separador decimal deve ser ponto (.)\nVírgula ou ponto-vírgula não é permitido nos campos de texto.\nCampos vazios ou nulos não são permitidos para obsid e não devem haver obsid duplicados\nCoordenados leste e norte devem corresponder ao SRID da base de dados.\n\nContinuar?""",'Você tem certeza?')
+            sanity = utils.askuser("YesNo","""Você está prestes a importar dados de pontos de observação de um arquivo de texto que deve conter uma linha de cabeçalho e 26 colunas (veja a página da web do plugin para explicações):\n\n1. obsid, 2. nome, 3. lugar, 4. tipo, 5. comprimento, 6. drillstop, 7. diam, 8. material, 9. screen, 10. capacidade, 11. data, 12. wmeas_yn, 13. wlogg_yn, 14. leste, 15. norte, 16. ne_accur, 17. ne_source, 18. a_bdp, 19. a_bdpgs, 20. h_gs, 21. a_acur, 22. a_syst, 23. a_fonte, 24. fonte, 25. com_onerow, 26. com_html\n\nNote que:\nO arquivo deve ser separado por vírgula ou ponto-vírgula.\nO separador decimal deve ser ponto (.)\nVírgula ou ponto-vírgula não é permitido nos campos de texto.\nCampos vazios ou nulos não são permitidos para obsid e não devem haver obsid duplicados\nCoordenados leste e norte devem corresponder ao SRID da base de dados.\n\nContinuar?""",'Você tem certeza?')
             #utils.pop_up_info(sanity.result)   #debugging
             if sanity.result == 1:
                 from import_data_to_db import midv_data_importer
