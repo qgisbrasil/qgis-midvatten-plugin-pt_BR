@@ -103,7 +103,7 @@ class newdb():
             default_crs = 3006
         else:
             default_crs = 4326
-        EPSGID = PyQt4.QtGui.QInputDialog.getInteger(None, "Selecione SRC", "Selecione o EPSG-ID (número inteiro) correspondente ao\nSRC que você deseja usar na base de dados:",default_crs)
+        EPSGID = PyQt4.QtGui.QInputDialog.getInteger(None, "Selecione SRC", "Selecione o EPSG-ID (numero inteiro) correspondente ao\nSRC que voce deseja usar na base de dados:",default_crs)
         return EPSGID
 
 
