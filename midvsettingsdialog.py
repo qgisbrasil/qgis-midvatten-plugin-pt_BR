@@ -320,7 +320,7 @@ class midvsettingsdialogdock(QDockWidget, midvsettingsdock_ui_class): #THE CLASS
             # finally, set dockwidget to last choosen tab
             self.tabWidget.setCurrentIndex(int(self.ms.settingsdict['tabwidget']))
         else:
-            self.iface.messageBar().pushMessage("Warning","Could not recover Midvatten settings. You will have to reset.", 1,duration=5)
+            self.iface.messageBar().pushMessage("Atencao","Nao foi possivel recuperar as configuracoes Midvatten. Voce deve reiniciar.", 1,duration=5)
 
     def LoadColumnsFromTable(self, table=''):
         """ This method returns a list with all the columns in the table"""
@@ -432,10 +432,10 @@ class midvsettingsdialogdock(QDockWidget, midvsettingsdock_ui_class): #THE CLASS
         # Make sure that columns obsid, stratid, depthtop, depthbot, geology, geoshort, capacity, comment exists
         Needed_columns = ('comment', 'capacity', 'geology', 'geoshort', 'depthtop', 'depthbot', 'obsid', 'stratid')
         columns = self.LoadColumnsFromTable(self.ListOfTables_3.currentText())     # For some reason it is not possible to send currentText with the SIGNAL-trigger
-        text = "<font color=green>Correct table! all the expected columns obsid, stratid, depthtop, depthbot, geology, geoshort, capacity, comment have been found.</font>"
+        text = "<font color=green>Tabela correta! Todas as colunas esperadas obsid, stratid, proftopo, profbase, geologia, geoabrev, capacidade, comentario foram encontradas.</font>"
         for column in Needed_columns:
             if not column in columns:
-                text = "<font color=red>Wrong table! Column " + str(column) + " is missing.</font>"
+                text = "<font color=red>Tabela incorreta! Coluna " + str(column) + " nao encontrada.</font>"
         self.InfoTxtStratigraphy.setText(text)
         self.ms.settingsdict['stratigraphytable']=self.ListOfTables_3.currentText()
         self.ms.save_settings('stratigraphytable')#save this specific setting
@@ -447,9 +447,9 @@ class midvsettingsdialogdock(QDockWidget, midvsettingsdock_ui_class): #THE CLASS
         # Second, Make sure that columns obsid and date_time exists
         columns = self.LoadColumnsFromTable(self.ListOfTables.currentText())     # For some reason it is not possible to send currentText with the SIGNAL-trigger
         if ('obsid' in columns) and ('date_time' in columns):
-            text = "<font color=green>Correct table, both obsid and date_time columns have been found.</font>"
+            text = "<font color=green>Tabela correta, as colunas obsid e data_hora foram encontradas.</font>"
         else:
-            text = "<font color=red>Wrong table! obsid and/or date_time is missing.</font>"
+            text = "<font color=red>Tabela incorreta! obsid e/ou data_hora nao encontradas.</font>"
         self.InfoTxtTSPlot.setText(text)
         #finally, save to qgis project settings
         self.ms.settingsdict['tstable']=self.ListOfTables.currentText()
@@ -504,9 +504,9 @@ class midvsettingsdialogdock(QDockWidget, midvsettingsdock_ui_class): #THE CLASS
         # Second, Make sure that column obsid exists
         columns = self.LoadColumnsFromTable(self.ListOfTables_2.currentText())     # For some reason it is not possible to send currentText with the SIGNAL-trigger
         if 'obsid' in columns:    
-            text = "<font color=green>Correct table! obsid column is found.</font>"
+            text = "<font color=green>Tabela correta! A coluna obsid foi encontrada.</font>"
         else:
-            text = "<font color=red>Wrong table! obsid is missing.</font>"
+            text = "<font color=red>Tabela incorreta! obsid nao encontrada.</font>"
         self.InfoTxtXYPlot.setText(text)
         self.ms.settingsdict['xytable']=self.ListOfTables_2.currentText()
         self.ms.save_settings('xytable')#save this specific setting
