@@ -785,7 +785,7 @@ class midvatten:
         layername = 'obs_points'
         err_flag = utils.verify_this_layer_selected_and_not_in_edit_mode(err_flag, layername)
         if err_flag == 0:
-            sanity = utils.askuser("TodosSelecionados","""Voce quer atualizar as coordenadas\npara Todos ou apenas objetos Selecionados?""")
+            sanity = utils.askuser("AllSelected","""Voce quer atualizar as coordenadas\npara Todos ou apenas objetos Selecionados?""")
             if sanity.result == 0:  #IF USER WANT ALL OBJECTS TO BE UPDATED
                 sanity = utils.askuser("YesNo","""Sanity check! Isto ira alterar a base de dados.\nAs coordenadas serao adicionadas nos campos leste e norte\npara TODOS objetos na tabela obs_points.\nContinuar?""")
                 if sanity.result==1:
@@ -813,7 +813,7 @@ class midvatten:
         err_flag = utils.verify_this_layer_selected_and_not_in_edit_mode(err_flag, layername)
         if err_flag == 0:
             layer = self.iface.activeLayer()
-            sanity = utils.askuser("TodosSelecionados","""Voce quer atualizar a posicao\npara TODOS objetos ou apenas Selecionados?""")
+            sanity = utils.askuser("AllSelected","""Voce quer atualizar a posicao\npara TODOS objetos ou apenas Selecionados?""")
             if sanity.result == 0:      #IF USER WANT ALL OBJECTS TO BE UPDATED
                 sanity = utils.askuser("YesNo","""Sanity check! Isto ira alterar a base de dados\nTODOS objetos em obs_points serao movidos para a posicao\ndada pelas coordenadas nos campos leste e norte.\nContinuar?""")
                 if sanity.result==1:
