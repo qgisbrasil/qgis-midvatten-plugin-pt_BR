@@ -149,8 +149,8 @@ class midvatten:
         self.actionPlotPiper.setWhatsThis("Plota o diagrama Piper para os objetos selecionados")
         QObject.connect(self.actionPlotPiper, SIGNAL("triggered()"), self.plot_piper)
                 
-        self.actionPlotSQLite = QAction(QIcon(os.path.join(os.path.dirname(__file__),"icons","plotsqliteicon.png")), "Graficos customizados", self.iface.mainWindow())
-        self.actionPlotSQLite.setWhatsThis("Cria graficos customizados para relatórios")
+        self.actionPlotSQLite = QAction(QIcon(os.path.join(os.path.dirname(__file__),"icons","plotsqliteicon.png")), "Gráficos customizados", self.iface.mainWindow())
+        self.actionPlotSQLite.setWhatsThis("Cria gráficos customizados para relatórios")
         QObject.connect(self.actionPlotSQLite, SIGNAL("triggered()"), self.plot_sqlite)
         
         self.actionPlotStratigraphy = QAction(QIcon(":/plugins/midvatten/icons/PlotStratigraphy.png"), "Perfil estratigráfico", self.iface.mainWindow())
@@ -238,7 +238,7 @@ class midvatten:
         self.menu.add_data_menu.addAction(self.actionupdateposition)   
         self.menu.add_data_menu.addAction(self.action_aveflowcalculate)   
 
-        self.menu.plot_data_menu = QMenu(QCoreApplication.translate("Midvatten", "&Gerar graficos"))
+        self.menu.plot_data_menu = QMenu(QCoreApplication.translate("Midvatten", "&Gerar gráficos"))
         #self.iface.addPluginToMenu("&Midvatten", self.menu.plot_data_menu.menuAction())
         self.menu.addMenu(self.menu.plot_data_menu)
         self.menu.plot_data_menu.addAction(self.actionPlotTS) 
