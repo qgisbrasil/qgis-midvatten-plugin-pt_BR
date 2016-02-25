@@ -68,35 +68,35 @@ class midvatten:
         self.actionNewDB = QAction(QIcon(":/plugins/midvatten/icons/create_new.xpm"), "Criar uma nova base de dados Midvatten", self.iface.mainWindow())
         QObject.connect(self.actionNewDB, SIGNAL("triggered()"), self.new_db)
         
-        self.actionloadthelayers = QAction(QIcon(":/plugins/midvatten/icons/loaddefaultlayers.png"), "Carregar as camadas padrao ao QGIS", self.iface.mainWindow())
-        self.actionloadthelayers.setWhatsThis("Carrega as camadas padrao da base de dados selecionada")
+        self.actionloadthelayers = QAction(QIcon(":/plugins/midvatten/icons/loaddefaultlayers.png"), "Carregar as camadas padrão ao QGIS", self.iface.mainWindow())
+        self.actionloadthelayers.setWhatsThis("Carrega as camadas padrão da base de dados selecionada")
         self.iface.registerMainWindowAction(self.actionloadthelayers, "F7")   # The function should also be triggered by the F7 key
         QObject.connect(self.actionloadthelayers, SIGNAL("activated()"), self.loadthelayers)
 
-        self.actionsetup = QAction(QIcon(":/plugins/midvatten/icons/MidvSettings.png"), "Configuracoes Midvatten", self.iface.mainWindow())
-        self.actionsetup.setWhatsThis("Configuracao das ferramentas Midvatten")
+        self.actionsetup = QAction(QIcon(":/plugins/midvatten/icons/MidvSettings.png"), "Configurações Midvatten", self.iface.mainWindow())
+        self.actionsetup.setWhatsThis("Configuração das ferramentas Midvatten")
         self.iface.registerMainWindowAction(self.actionsetup, "F6")   # The function should also be triggered by the F6 key
         QObject.connect(self.actionsetup, SIGNAL("activated()"), self.setup)
         
-        self.actionresetSettings = QAction(QIcon(":/plugins/midvatten/icons/ResetSettings.png"), "Resetar configuracoes", self.iface.mainWindow())
+        self.actionresetSettings = QAction(QIcon(":/plugins/midvatten/icons/ResetSettings.png"), "Resetar configurações", self.iface.mainWindow())
         QObject.connect(self.actionresetSettings, SIGNAL("triggered()"), self.reset_settings)
         
         self.actionabout = QAction(QIcon(":/plugins/midvatten/icons/about.png"), "Sobre", self.iface.mainWindow())
         QObject.connect(self.actionabout, SIGNAL("triggered()"), self.about)
         
-        self.actionupdatecoord = QAction(QIcon(":/plugins/midvatten/icons/updatecoordfrpos.png"), "Atualizar coordenadas pela posicao do mapa", self.iface.mainWindow())
+        self.actionupdatecoord = QAction(QIcon(":/plugins/midvatten/icons/updatecoordfrpos.png"), "Atualizar coordenadas pela posição do mapa", self.iface.mainWindow())
         QObject.connect(self.actionupdatecoord , SIGNAL("triggered()"), self.updatecoord)
         
-        self.actionupdateposition = QAction(QIcon(":/plugins/midvatten/icons/updateposfrcoord.png"), "Atualizar posicao do mapa pelas coordenadas", self.iface.mainWindow())
+        self.actionupdateposition = QAction(QIcon(":/plugins/midvatten/icons/updateposfrcoord.png"), "Atualizar posição do mapa pelas coordenadas", self.iface.mainWindow())
         QObject.connect(self.actionupdateposition , SIGNAL("triggered()"), self.updateposition)
         
-        self.action_import_wlvl = QAction(QIcon(":/plugins/midvatten/icons/load_wlevels_manual.png"), "Importar leituras de nivel de agua", self.iface.mainWindow())
+        self.action_import_wlvl = QAction(QIcon(":/plugins/midvatten/icons/load_wlevels_manual.png"), "Importar leituras de nível de água", self.iface.mainWindow())
         QObject.connect(self.action_import_wlvl , SIGNAL("triggered()"), self.import_wlvl)
         
         self.action_import_wflow = QAction(QIcon(":/plugins/midvatten/icons/load_wflow.png"), "Importar medidas de fluxo", self.iface.mainWindow())
         QObject.connect(self.action_import_wflow , SIGNAL("triggered()"), self.import_wflow)
         
-        self.action_import_seismics = QAction(QIcon(":/plugins/midvatten/icons/load_seismics.png"), "Importar dados sismicos", self.iface.mainWindow())
+        self.action_import_seismics = QAction(QIcon(":/plugins/midvatten/icons/load_seismics.png"), "Importar dados sísmicos", self.iface.mainWindow())
         QObject.connect(self.action_import_seismics , SIGNAL("triggered()"), self.import_seismics)
         
         self.action_import_vlf = QAction(QIcon(":/plugins/midvatten/icons/load_vlf.png"), "Importar dados vlf", self.iface.mainWindow())
@@ -105,43 +105,43 @@ class midvatten:
         self.action_import_obs_lines = QAction(QIcon(":/plugins/midvatten/icons/import_obs_lines.png"), "Importar tabela obs lines", self.iface.mainWindow())
         QObject.connect(self.action_import_obs_lines , SIGNAL("triggered()"), self.import_obs_lines)
         
-        self.action_wlvlcalculate = QAction(QIcon(":/plugins/midvatten/icons/calc_level_masl.png"), "Calcular nivel de agua acima do nivel do mar", self.iface.mainWindow())
+        self.action_wlvlcalculate = QAction(QIcon(":/plugins/midvatten/icons/calc_level_masl.png"), "Calcular nível de água acima do nível do mar", self.iface.mainWindow())
         QObject.connect(self.action_wlvlcalculate , SIGNAL("triggered()"), self.wlvlcalculate)
         
         self.action_aveflowcalculate = QAction(QIcon(":/plugins/midvatten/icons/import_wflow.png"), "Calcular Aveflow de Accvol", self.iface.mainWindow())
         QObject.connect(self.action_aveflowcalculate , SIGNAL("triggered()"), self.aveflowcalculate)
         
-        self.action_import_wlvllogg = QAction(QIcon(":/plugins/midvatten/icons/load_wlevels_logger.png"), "Importar nivel de agua pelo logger", self.iface.mainWindow())
+        self.action_import_wlvllogg = QAction(QIcon(":/plugins/midvatten/icons/load_wlevels_logger.png"), "Importar nível de água pelo logger", self.iface.mainWindow())
         QObject.connect(self.action_import_wlvllogg , SIGNAL("triggered()"), self.import_wlvllogg)
         
-        self.action_wlvlloggcalibrate = QAction(QIcon(":/plugins/midvatten/icons/calibr_level_logger_masl.png"), "Calibrar nivel de agua pelo logger", self.iface.mainWindow())
+        self.action_wlvlloggcalibrate = QAction(QIcon(":/plugins/midvatten/icons/calibr_level_logger_masl.png"), "Calibrar nível de água pelo logger", self.iface.mainWindow())
         QObject.connect(self.action_wlvlloggcalibrate , SIGNAL("triggered()"), self.wlvlloggcalibrate)
 
-        self.actionimport_wqual_lab = QAction(QIcon(":/plugins/midvatten/icons/import_wqual_lab.png"), "Importar dados de lab. de qual. agua", self.iface.mainWindow())
+        self.actionimport_wqual_lab = QAction(QIcon(":/plugins/midvatten/icons/import_wqual_lab.png"), "Importar dados de lab. de qual. água", self.iface.mainWindow())
         QObject.connect(self.actionimport_wqual_lab, SIGNAL("triggered()"), self.import_wqual_lab)
         
-        self.actionimport_wqual_field = QAction(QIcon(":/plugins/midvatten/icons/import_wqual_field.png"), "Importar dados de campo de qual. agua", self.iface.mainWindow())
+        self.actionimport_wqual_field = QAction(QIcon(":/plugins/midvatten/icons/import_wqual_field.png"), "Importar dados de campo de qual. água", self.iface.mainWindow())
         QObject.connect(self.actionimport_wqual_field, SIGNAL("triggered()"), self.import_wqual_field)
         
-        self.actionimport_stratigraphy = QAction(QIcon(":/plugins/midvatten/icons/import_stratigraphy.png"), "Importar dados estratigraficos", self.iface.mainWindow())
+        self.actionimport_stratigraphy = QAction(QIcon(":/plugins/midvatten/icons/import_stratigraphy.png"), "Importar dados estratigráficos", self.iface.mainWindow())
         QObject.connect(self.actionimport_stratigraphy, SIGNAL("triggered()"), self.import_stratigraphy)
         
         self.actionimport_obs_points = QAction(QIcon(":/plugins/midvatten/icons/import_obs_points.png"), "Importar tabela obs points", self.iface.mainWindow())
         QObject.connect(self.actionimport_obs_points, SIGNAL("triggered()"), self.import_obs_points)
         
-        self.actionimport_wflow = QAction(QIcon(":/plugins/midvatten/icons/import_wflow.png"), "Importar medidas de fluxo de agua", self.iface.mainWindow())
+        self.actionimport_wflow = QAction(QIcon(":/plugins/midvatten/icons/import_wflow.png"), "Importar medidas de fluxo de água", self.iface.mainWindow())
         QObject.connect(self.actionimport_wflow, SIGNAL("triggered()"), self.import_wflow)
         
-        self.actionimport_meteo = QAction(QIcon(":/plugins/midvatten/icons/import_wqual_field.png"), "Importar observacoes metereologicas", self.iface.mainWindow())
+        self.actionimport_meteo = QAction(QIcon(":/plugins/midvatten/icons/import_wqual_field.png"), "Importar observações metereológicas", self.iface.mainWindow())
         QObject.connect(self.actionimport_meteo, SIGNAL("triggered()"), self.import_meteo)
         
-        self.actionPlotTS = QAction(QIcon(":/plugins/midvatten/icons/PlotTS.png"), "Grafico de serie temporal", self.iface.mainWindow())
+        self.actionPlotTS = QAction(QIcon(":/plugins/midvatten/icons/PlotTS.png"), "Gráfico de série temporal", self.iface.mainWindow())
         self.actionPlotTS.setWhatsThis("Plota a serie temporal para os objetos selecionados")
         self.iface.registerMainWindowAction(self.actionPlotTS, "F8")   # The function should also be triggered by the F8 key
         QObject.connect(self.actionPlotTS, SIGNAL("triggered()"), self.plot_timeseries)
         
-        self.actionPlotXY = QAction(QIcon(":/plugins/midvatten/icons/PlotXY.png"), "Grafico de dispersao", self.iface.mainWindow())
-        self.actionPlotXY.setWhatsThis("Plota dados de dispersao XY (e.g. perfil sismico) para os objetos selecionados")
+        self.actionPlotXY = QAction(QIcon(":/plugins/midvatten/icons/PlotXY.png"), "Gráfico de dispersão", self.iface.mainWindow())
+        self.actionPlotXY.setWhatsThis("Plota dados de dispersão XY (e.g. perfil sísmico) para os objetos selecionados")
         self.iface.registerMainWindowAction(self.actionPlotXY, "F9")   # The function should also be triggered by the F9 key
         QObject.connect(self.actionPlotXY, SIGNAL("triggered()"), self.plot_xy)
         
@@ -150,26 +150,26 @@ class midvatten:
         QObject.connect(self.actionPlotPiper, SIGNAL("triggered()"), self.plot_piper)
                 
         self.actionPlotSQLite = QAction(QIcon(os.path.join(os.path.dirname(__file__),"icons","plotsqliteicon.png")), "Graficos customizados", self.iface.mainWindow())
-        self.actionPlotSQLite.setWhatsThis("Cria graficos customizados para relatorios")
+        self.actionPlotSQLite.setWhatsThis("Cria graficos customizados para relatórios")
         QObject.connect(self.actionPlotSQLite, SIGNAL("triggered()"), self.plot_sqlite)
         
-        self.actionPlotStratigraphy = QAction(QIcon(":/plugins/midvatten/icons/PlotStratigraphy.png"), "Perfil estratigrafico", self.iface.mainWindow())
+        self.actionPlotStratigraphy = QAction(QIcon(":/plugins/midvatten/icons/PlotStratigraphy.png"), "Perfil estratigráfico", self.iface.mainWindow())
         self.actionPlotStratigraphy.setWhatsThis("Mostra a estratigrafia dos objetos selecionados (modified ARPAT)")
         self.iface.registerMainWindowAction(self.actionPlotStratigraphy, "F10")   # The function should also be triggered by the F10 key
         QObject.connect(self.actionPlotStratigraphy, SIGNAL("triggered()"), self.plot_stratigraphy)
         
-        self.actiondrillreport = QAction(QIcon(":/plugins/midvatten/icons/drill_report.png"), "Relatorio Geral", self.iface.mainWindow())
-        self.actiondrillreport.setWhatsThis("Mostra um relatorio geral para os obs points selecionados")
+        self.actiondrillreport = QAction(QIcon(":/plugins/midvatten/icons/drill_report.png"), "Relatório Geral", self.iface.mainWindow())
+        self.actiondrillreport.setWhatsThis("Mostra um relatório geral para os obs points selecionados")
         self.iface.registerMainWindowAction(self.actiondrillreport, "F11")   # The function should also be triggered by the F11 key
         QObject.connect(self.actiondrillreport, SIGNAL("triggered()"), self.drillreport)
 
-        self.actionwqualreport = QAction(QIcon(":/plugins/midvatten/icons/wqualreport.png"), "Relatorio de qualidade da agua", self.iface.mainWindow())
-        self.actionwqualreport.setWhatsThis("Mostra a qualidade da agua para os obs points selecionados")
+        self.actionwqualreport = QAction(QIcon(":/plugins/midvatten/icons/wqualreport.png"), "Relatório de qualidade da água", self.iface.mainWindow())
+        self.actionwqualreport.setWhatsThis("Mostra a qualidade da água para os obs points selecionados")
         self.iface.registerMainWindowAction(self.actionwqualreport, "F12")   # The function should also be triggered by the F12 key
         QObject.connect(self.actionwqualreport, SIGNAL("triggered()"), self.waterqualityreport)
 
-        self.actionPlotSection = QAction(QIcon(":/plugins/midvatten/icons/PlotSection.png"), "Plotagem de Secao", self.iface.mainWindow())
-        self.actionPlotSection.setWhatsThis("Plota uma secao com estratigrafia e niveis de agua")
+        self.actionPlotSection = QAction(QIcon(":/plugins/midvatten/icons/PlotSection.png"), "Plotagem de Seção", self.iface.mainWindow())
+        self.actionPlotSection.setWhatsThis("Plota uma seção com estratigrafia e níveis de água")
         #self.iface.registerMainWindowAction(self.actionChartMaker, "F12")   # The function should also be triggered by the F12 key
         QObject.connect(self.actionPlotSection, SIGNAL("triggered()"), self.plot_section)
         
@@ -186,11 +186,11 @@ class midvatten:
         QObject.connect(self.actionZipDB, SIGNAL("triggered()"), self.zip_db)
 
         self.action_export_csv = QAction(QIcon(":/plugins/midvatten/icons/export_csv.png"), "Exporta para um conjunto de arquivos csv", self.iface.mainWindow())
-        self.action_export_csv.setWhatsThis("Todos dados dos objetos selecionados (obs_points e obs_lines) serao exportados para um conjunto de arquivos csv.")
+        self.action_export_csv.setWhatsThis("Todos dados dos objetos selecionados (obs_points e obs_lines) serão exportados para um conjunto de arquivos csv.")
         QObject.connect(self.action_export_csv, SIGNAL("triggered()"), self.export_csv)
 
         self.action_export_spatialite = QAction(QIcon(":/plugins/midvatten/icons/export_spatialite.png"), "Exporta para outra base de dados spatialite", self.iface.mainWindow())
-        self.action_export_spatialite.setWhatsThis("Todos os dados dos objetos selecionados (obs_points e obs_lines) serao exportados para outra BD spatialite.")
+        self.action_export_spatialite.setWhatsThis("Todos os dados dos objetos selecionados (obs_points e obs_lines) serão exportados para outra BD spatialite.")
         QObject.connect(self.action_export_spatialite, SIGNAL("triggered()"), self.export_spatialite)
 
         # Add toolbar with buttons 
@@ -248,7 +248,7 @@ class midvatten:
         self.menu.plot_data_menu.addAction(self.actionPlotSQLite)
         self.menu.plot_data_menu.addAction(self.actionPlotPiper)
 
-        self.menu.report_menu = QMenu(QCoreApplication.translate("Midvatten", "&Gerar relatorios"))
+        self.menu.report_menu = QMenu(QCoreApplication.translate("Midvatten", "&Gerar relatórios"))
         self.menu.addMenu(self.menu.report_menu)
         self.menu.report_menu.addAction(self.actiondrillreport)
         self.menu.report_menu.addAction(self.actionwqualreport)
@@ -405,7 +405,7 @@ class midvatten:
             else:
                 OBSID_L = tuple([])
 
-            sanity = utils.askuser("YesNo","""Isto criara uma nova base de dados Midvatten vazia com design pre definido\ne completara a base de dados com os dados dos obs_points e obs_lines selecionados.\n\nContinuar?""",'Voce tem certeza?')
+            sanity = utils.askuser("YesNo","""Isto criara uma nova base de dados Midvatten vazia com design pre definido\ne completara a base de dados com os dados dos obs_points e obs_lines selecionados.\n\nContinuar?""",'Você tem certeza?')
             if sanity.result == 1:
                 QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))#show the user this may take a long time...
                 obsp_layer = utils.find_layer('obs_points')
@@ -427,7 +427,7 @@ class midvatten:
         allcritical_layers = ('obs_lines')#none of these layers must be in editing mode
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms, allcritical_layers)#verify midv settings are loaded and the critical layers are not in editing mode
         if err_flag == 0:        # unless none of the critical layers are in editing mode
-            sanity = utils.askuser("YesNo","""Voce esta prestes a importar dados de linhas de observacao de um arquivo de texto que deve conter uma linha de cabecalho e 6 colunas (veja a pagina da web do plugin para explicacoes):\nWKT;obsid;nome;lugar;tipo;fonte\n\nNote que:\nDeve haver geometrias WKT do tipo LINESTRING na primeira coluna.\nA LINESTRING deve corresponder ao SRID na base de dados\nO arquivo deve ser separado por virgula ou ponto e virgula.\nSeparados decimal deve ser ponto (.)\nVirgula ou ponto e virgula nao e permitido nos campos de texto.\nCampos vazios ou nulos nao sao permitidos para obsid e nao devem haver obsid duplicados\n\nContinuar?""",'Voce tem certeza?')
+            sanity = utils.askuser("YesNo","""Você está prestes a importar dados de linhas de observação de um arquivo de texto que deve conter uma linha de cabeçalho e 6 colunas (veja a página da web do plugin para explicações):\nWKT;obsid;nome;lugar;tipo;fonte\n\nNote que:\nDeve haver geometrias WKT do tipo LINESTRING na primeira coluna.\nA LINESTRING deve corresponder ao SRID na base de dados\nO arquivo deve ser separado por vírgula ou ponto e vírgula.\nSeparados decimal deve ser ponto (.)\nVírgula ou ponto e vírgula não e permitido nos campos de texto.\nCampos vazios ou nulos não são permitidos para obsid e não devem haver obsid duplicados\n\nContinuar?""",'Você tem certeza?')
             #utils.pop_up_info(sanity.result)   #debugging
             if sanity.result == 1:
                 from import_data_to_db import midv_data_importer
@@ -445,7 +445,7 @@ class midvatten:
         allcritical_layers = ('obs_points')#none of these layers must be in editing mode
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms, allcritical_layers)#verify midv settings are loaded and the critical layers are not in editing mode
         if err_flag == 0:        # unless none of the critical layers are in editing mode
-            sanity = utils.askuser("YesNo","""Voce esta prestes a importar dados de pontos de observacao de um arquivo de texto que deve conter uma linha de cabecalho e 26 colunas (veja a pagina da web do plugin para explicacoes):\n\n1. obsid, 2. nome, 3. lugar, 4. tipo, 5. comprimento, 6. drillstop, 7. diam, 8. material, 9. screen, 10. capacidade, 11. data, 12. wmeas_yn, 13. wlogg_yn, 14. leste, 15. norte, 16. ne_accur, 17. ne_source, 18. a_bdp, 19. a_bdpgs, 20. h_gs, 21. a_acur, 22. a_syst, 23. a_fonte, 24. fonte, 25. com_onerow, 26. com_html\n\nNote que:\nO arquivo deve ser separado por virgula ou ponto e virgula.\nO separador decimal deve ser ponto (.)\nVirgula ou ponto e virgula nao sao permitidos nos campos de texto.\nCampos vazios ou nulos nao sao permitidos para obsid e nao devem haver obsid duplicados\nCoordenados leste e norte devem corresponder ao SRID da base de dados.\n\nContinuar?""",'Voce tem certeza?')
+            sanity = utils.askuser("YesNo","""Você esta prestes a importar dados de pontos de observação de um arquivo de texto que deve conter uma linha de cabeçalho e 26 colunas (veja a página da web do plugin para explicações):\n\n1. obsid, 2. nome, 3. lugar, 4. tipo, 5. comprimento, 6. drillstop, 7. diam, 8. material, 9. screen, 10. capacidade, 11. data, 12. wmeas_yn, 13. wlogg_yn, 14. leste, 15. norte, 16. ne_accur, 17. ne_source, 18. a_bdp, 19. a_bdpgs, 20. h_gs, 21. a_acur, 22. a_syst, 23. a_fonte, 24. fonte, 25. com_onerow, 26. com_html\n\nNote que:\nO arquivo deve ser separado por vírgula ou ponto e vírgula.\nO separador decimal deve ser ponto (.)\nVirgula ou ponto e vírgula não são permitidos nos campos de texto.\nCampos vazios ou nulos não são permitidos para obsid e não devem haver obsid duplicados\nCoordenados leste e norte devem corresponder ao SRID da base de dados.\n\nContinuar?""",'Você tem certeza?')
             #utils.pop_up_info(sanity.result)   #debugging
             if sanity.result == 1:
                 from import_data_to_db import midv_data_importer
@@ -454,7 +454,7 @@ class midvatten:
                 #utils.pop_up_info(returnvalue) #debugging
                 #utils.pop_up_info(importinstance.status) #debugging
                 if importinstance.status=='True':      # 
-                    utils.pop_up_info("%s pontos de observacao foram importados para a base de dados.\nPara mostrar os pontos importados no mapa, selecione-os na\ntabela de atributos obs_points e entao atualize a posicao do mapa:\nMidvatten - Editar dados na base de dados - Atualizar a posicao do mapa pelas coordenadas"%str(importinstance.recsafter - importinstance.recsbefore))
+                    utils.pop_up_info("%s pontos de observacao foram importados para a base de dados.\nPara mostrar os pontos importados no mapa, selecione-os na\ntabela de atributos obs_points e então atualize a posição do mapa:\nMidvatten - Editar dados na base de dados - Atualizar a posição do mapa pelas coordenadas"%str(importinstance.recsafter - importinstance.recsbefore))
                     #self.iface.messageBar().pushMessage("Info","%s observation points were imported to the database.\nTo display the imported points on map, select them in\nthe obs_points attribute table then update map position:\nMidvatten - Edit data in database - Update map position from coordinates"%str(importinstance.recsafter - importinstance.recsbefore), 0)                    
                     try:
                         self.midvsettingsdialog.ClearEverything()
@@ -466,13 +466,13 @@ class midvatten:
         allcritical_layers = ('obs_lines', 'seismic_data')#none of these layers must be in editing mode
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms, allcritical_layers)#verify midv settings are loaded and the critical layers are not in editing mode
         if err_flag == 0: 
-            sanity = utils.askuser("YesNo","""Voce esta prestes a importar dados sismicos interpretados de um arquivo de texto que deve conter uma linha de cabecalho e 6 colunas:\n\nobsid, comprimento, ground, embasamento, gw_table, comentario\n\nNote que:\nO arquivo deve ser separado por virgula ou ponto e virgula.\nO separador decimal deve ser ponto (.)\nCampo vazio ou nulo nao e permitido para obsid ou comprimento.\nCada combinacao de obsid e comprimento deve ser unica.\n\nContinuar?""",'Voce tem certeza?')
+            sanity = utils.askuser("YesNo","""Você esta prestes a importar dados sísmicos interpretados de um arquivo de texto que deve conter uma linha de cabeçalho e 6 colunas:\n\nobsid, comprimento, ground, embasamento, gw_table, comentário\n\nNote que:\nO arquivo deve ser separado por vírgula ou ponto e vírgula.\nO separador decimal deve ser ponto (.)\nCampo vazio ou nulo não é permitido para obsid ou comprimento.\nCada combinação de obsid e comprimento deve ser única.\n\nContinuar?""",'Você tem certeza?')
             if sanity.result == 1:
                 from import_data_to_db import midv_data_importer
                 importinstance = midv_data_importer()
                 importinstance.seismics_import()
                 if importinstance.status=='True':  
-                    self.iface.messageBar().pushMessage("Info","%s dados sismicos interpretados foram importados para a base de dados"%str(importinstance.recsafter - importinstance.recsbefore), 0)
+                    self.iface.messageBar().pushMessage("Info","%s dados sísmicos interpretados foram importados para a base de dados"%str(importinstance.recsafter - importinstance.recsbefore), 0)
                     try:
                         self.midvsettingsdialog.ClearEverything()
                         self.midvsettingsdialog.LoadAndSelectLastSettings()
@@ -483,13 +483,13 @@ class midvatten:
         allcritical_layers = ('obs_points', 'stratigraphy')#none of these layers must be in editing mode
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms, allcritical_layers)#verify midv settings are loaded and the critical layers are not in editing mode
         if err_flag == 0:        # unless none of the critical layers are in editing mode
-            sanity = utils.askuser("YesNo","""Voce esta prestes a importar dados estratigraficos de um arquivo de texto que deve conter uma linha de cabecalho e 9 colunas:\n1. obsid\n2. stratid - numero inteiro comecando pela superficie e aumentando com a profundidade\n3. profundidade_topo - profundidade ate o topo da camada\n4. profundidade_base - profundidade ate a base da camada\n5. geologia - descricao completa da geologia da camada\n6. geoabrev - abreviacao para a geologia da camada (ver dicionario)\n7. capacidade\n8. development - well development\n9. comentario\n\nNote que:\nO arquivo deve ser separado por virgula ou ponto e virgula.\nO separador decimal deve ser ponto (.)\nVirgula e ponto e virgula nao sao permitidos nos comentarios.\nCampos vazios ou nulos nao sao permitidos para obsid e stratid, tais campos serao excluidos da importacao.\nCada combinacao de obsid e stratid deve ser unica.\n\nContinuar?""",'Voce tem certeza?')
+            sanity = utils.askuser("YesNo","""Você está prestes a importar dados estratigráficos de um arquivo de texto que deve conter uma linha de cabeçalho e 9 colunas:\n1. obsid\n2. stratid - número inteiro comecando pela superfície e aumentando com a profundidade\n3. profundidade_topo - profundidade ate o topo da camada\n4. profundidade_base - profundidade ate a base da camada\n5. geologia - descricao completa da geologia da camada\n6. geoabrev - abreviacao para a geologia da camada (ver dicionario)\n7. capacidade\n8. development - well development\n9. comentário\n\nNote que:\nO arquivo deve ser separado por vírgula ou ponto e vírgula.\nO separador decimal deve ser ponto (.)\nVírgula e ponto e vírgula não são permitidos nos comentários.\nCampos vazios ou nulos não são permitidos para obsid e stratid, tais campos serão excluídos da importação.\nCada combinação de obsid e stratid deve ser única.\n\nContinuar?""",'Você tem certeza?')
             if sanity.result == 1:
                 from import_data_to_db import midv_data_importer
                 importinstance = midv_data_importer()
                 importinstance.strat_import()
                 if importinstance.status=='True':      # 
-                    self.iface.messageBar().pushMessage("Info","%s camadas estratigraficas foram importadas para a base de dados"%str(importinstance.recsafter - importinstance.recsbefore), 0)
+                    self.iface.messageBar().pushMessage("Info","%s camadas estratigráficas foram importadas para a base de dados"%str(importinstance.recsafter - importinstance.recsbefore), 0)
                     try:
                         self.midvsettingsdialog.ClearEverything()
                         self.midvsettingsdialog.LoadAndSelectLastSettings()
@@ -500,14 +500,14 @@ class midvatten:
         allcritical_layers = ('obs_lines', 'vlf_data')#none of these layers must be in editing mode
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms, allcritical_layers)#verify midv settings are loaded and the critical layers are not in editing mode
         if err_flag == 0:        # om ingen av de kritiska lagren är i editeringsmode
-            sanity = utils.askuser("YesNo","""Voce esta prester a importar dados vlf nao tratados de um arquivo de texto que deve conter uma linha de cabecalho e 5 colunas:\n\nobsid; comprimento; real_comp; imag_comp, comentario\n\nNote que:\nO arquivo deve ser separado por virgula ou ponto e virgula.\nO separador decimal deve ser ponto (.)\nCampos vazios ou nulos nao sao permitidos para obsid e comprimento.\n Cada combinacao de obsid e comprimento deve ser enica.\n\nContinuar?""",'Voce tem certeza?')
+            sanity = utils.askuser("YesNo","""Você esta prester a importar dados vlf não tratados de um arquivo de texto que deve conter uma linha de cabeçalho e 5 colunas:\n\nobsid; comprimento; real_comp; imag_comp, comentário\n\nNote que:\nO arquivo deve ser separado por vírgula ou ponto e vírgula.\nO separador decimal deve ser ponto (.)\nCampos vazios ou nulos não são permitidos para obsid e comprimento.\n Cada combinação de obsid e comprimento deve ser enica.\n\nContinuar?""",'Você tem certeza?')
             #utils.pop_up_info(sanity.result)   #debugging
             if sanity.result == 1:
                 from import_data_to_db import midv_data_importer
                 importinstance = midv_data_importer()
                 importinstance.vlf_import()
                 if importinstance.status=='True': 
-                    self.iface.messageBar().pushMessage("Info","%s valores vlf nao tratados foram importados para a base de dados"%str(importinstance.recsafter - importinstance.recsbefore), 0)
+                    self.iface.messageBar().pushMessage("Info","%s valores vlf não tratados foram importados para a base de dados"%str(importinstance.recsafter - importinstance.recsbefore), 0)
                     try:
                         self.midvsettingsdialog.ClearEverything()
                         self.midvsettingsdialog.LoadAndSelectLastSettings()
@@ -518,14 +518,14 @@ class midvatten:
         allcritical_layers = ('obs_points', 'w_flow')#none of these layers must be in editing mode
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms, allcritical_layers)#verify midv settings are loaded and the critical layers are not in editing mode
         if err_flag == 0:        # om ingen av de kritiska lagren är i editeringsmode
-            sanity = utils.askuser("YesNo","""Voce esta prestes a importar leituras de fluxo de agua de um arquivo de texto que deve conter uma linha de cabecalho e 7 colunas:\n\n1. obsid\n2. instrumentid\n3. tipofluxo\n4. data_hora\n5. leitura\n6. unidade\n7. comentario\n\nNote que:\nO arquivo deve ser separado por virgula ou ponto e virgula.\ndata_hora deve ser no formato 'aaaa-mm-dd hh:mm(:ss)'.\nO separador decimal deve ser ponto (.)\nVirgula e ponto e virgula nao sao permitidos nos comentarios.\nCertifique-se de utilizar um numero limitado de tipos de fluxo, pois todos serao adicionados a tabela zz_flowtype na base de dados durante a importacao.\nCampos vazios ou nulos nao sao permitidos para obsid, instrumentid, tipofluxo ou data_hora.\nCada combinacao de obsid, instrumentid, tipofluxo e data_hora deve ser anica.\n\nContinuar?""",'Voce tem certeza?')
+            sanity = utils.askuser("YesNo","""Você está prestes a importar leituras de fluxo de água de um arquivo de texto que deve conter uma linha de cabeçalho e 7 colunas:\n\n1. obsid\n2. instrumentid\n3. tipofluxo\n4. data_hora\n5. leitura\n6. unidade\n7. comentário\n\nNote que:\nO arquivo deve ser separado por vírgula ou ponto e vírgula.\ndata_hora deve ser no formato 'aaaa-mm-dd hh:mm(:ss)'.\nO separador decimal deve ser ponto (.)\nVírgula e ponto e vírgula não são permitidos nos comentários.\nCertifique-se de utilizar um número limitado de tipos de fluxo, pois todos serão adicionados a tabela zz_flowtype na base de dados durante a importação.\nCampos vazios ou nulos não são permitidos para obsid, instrumentid, tipofluxo ou data_hora.\nCada combinação de obsid, instrumentid, tipofluxo e data_hora deve ser anica.\n\nContinuar?""",'Você tem certeza?')
             #utils.pop_up_info(sanity.result)   #debugging
             if sanity.result == 1:
                 from import_data_to_db import midv_data_importer
                 importinstance = midv_data_importer()
                 importinstance.wflow_import()
                 if importinstance.status=='True':      # 
-                    self.iface.messageBar().pushMessage("Info","%s leituras de fluxo de agua foram importadas para a base de dados"%str(importinstance.recsafter - importinstance.recsbefore), 0)
+                    self.iface.messageBar().pushMessage("Info","%s leituras de fluxo de água foram importadas para a base de dados"%str(importinstance.recsafter - importinstance.recsbefore), 0)
                     try:
                         self.midvsettingsdialog.ClearEverything()
                         self.midvsettingsdialog.LoadAndSelectLastSettings()
@@ -536,13 +536,13 @@ class midvatten:
         allcritical_layers = ('obs_points', 'w_levels')#none of these layers must be in editing mode
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms, allcritical_layers)#verify midv settings are loaded and the critical layers are not in editing mode
         if err_flag == 0:
-            sanity = utils.askuser("YesNo","""Voce esta prestes a importar leituras de nivel de agua de um arquivo de texto que deve conter uma linha de cabecalho e 4 colunas:\n\nobsid;data_hora;leitu;comentario\n\nNote que:\nO arquivo deve ser separado por virgula ou ponto e virgula.\ndata_hora deve ser no formato 'aaaa-mm-dd hh:mm(:ss)'.\nO separador decimal deve ser ponto (.)\nVirgula e ponto e virgula nao sao permitidos nos comentarios.\nCampos vazios ou nulos nao sao permitidos para obsid ou data_hora, tais linhas serao excluidas da importacao.\nCampos vazios ou nulos nao sao aceitos ao mesmo tempo nas colunas leitu e comentario.\nCada combinacao de obsid e data_hora deve ser unica.\n\nContinuar?""",'Voce tem certeza?')
+            sanity = utils.askuser("YesNo","""Você esta prestes a importar leituras de nível de água de um arquivo de texto que deve conter uma linha de cabeçalho e 4 colunas:\n\nobsid;data_hora;leitu;comentário\n\nNote que:\nO arquivo deve ser separado por vírgula ou ponto e vírgula.\ndata_hora deve ser no formato 'aaaa-mm-dd hh:mm(:ss)'.\nO separador decimal deve ser ponto (.)\nVírgula e ponto e vírgula não são permitidos nos comentários.\nCampos vazios ou nulos não são permitidos para obsid ou data_hora, tais linhas serão excluídas da importação.\nCampos vazios ou nulos não são aceitos ao mesmo tempo nas colunas leitu e comentário.\nCada combinaçao de obsid e data_hora deve ser única.\n\nContinuar?""",'Você tem certeza?')
             if sanity.result == 1:
                 from import_data_to_db import midv_data_importer
                 importinstance = midv_data_importer()
                 importinstance.wlvl_import()
                 if importinstance.status=='True': 
-                    self.iface.messageBar().pushMessage("Info","%s leituras de nivel de agua foram importadas para a base de dados"%str(importinstance.recsafter - importinstance.recsbefore), 0)
+                    self.iface.messageBar().pushMessage("Info","%s leituras de nível de água foram importadas para a base de dados"%str(importinstance.recsafter - importinstance.recsbefore), 0)
                     try:
                         self.midvsettingsdialog.ClearEverything()
                         self.midvsettingsdialog.LoadAndSelectLastSettings()
@@ -557,15 +557,15 @@ class midvatten:
                 if qgis.utils.iface.activeLayer():
                     if utils.selection_check(qgis.utils.iface.activeLayer(),1) == 'ok':                
                         obsid = utils.getselectedobjectnames(qgis.utils.iface.activeLayer())                    
-                        longmessage = """Voce esta prestes a importar dados de carga hidraulica registrados com um\nLevel Logger (e.g. Diver) """
+                        longmessage = """Você está prestes a importar dados de carga hidráulica registrados com um\nLevel Logger (e.g. Diver) """
                         longmessage += obsid[0]
-                        longmessage +=u""".\nOs dados devem ser importados de um texto separado por\nvirgula ou ponto e virgula. O arquivo deve conter uma linha de cabecalho e as colunas:\n\nData/hora, Carga hidraulica[cm],Temperatura[°C]\nou\nData/hora,Carga hidraulica[cm],Temperatura[°C],1:Condutividade[mS/cm]\n\nO nome das colunas nao e importante, embora a ordem seja.\nA coluna data-hora deve ser no formato aaaa-mm-dd hh:mm(:ss) e\nas outras colunas devem ser numero reais com ponto(.) como separador decimal e sem separador de milhares.\nLembre-se de nao utilizar virgulas no campo comentarios!\n\nRegistros com qualquer campo vazio serao excluidos do relatorio!\n\nContinuar?"""
+                        longmessage +=u""".\nOs dados devem ser importados de um texto separado por\nvírgula ou ponto e vírgula. O arquivo deve conter uma linha de cabeçalho e as colunas:\n\nData/hora, Carga hidráulica[cm],Temperatura[°C]\nou\nData/hora,Carga hidráulica[cm],Temperatura[°C],1:Condutividade[mS/cm]\n\nO nome das colunas não é importante, embora a ordem seja.\nA coluna data-hora deve ser no formato aaaa-mm-dd hh:mm(:ss) e\nas outras colunas devem ser número reais com ponto(.) como separador decimal e sem separador de milhares.\nLembre-se de não utilizar virgulas no campo comentários!\n\nRegistros com qualquer campo vazio serão excluídos do relatório!\n\nContinuar?"""
                         sanity = utils.askuser("YesNo",utils.returnunicode(longmessage),'Você tem certeza?')
                         if sanity.result == 1:
                             from import_data_to_db import wlvlloggimportclass
                             importinstance = wlvlloggimportclass()
                             if not importinstance.status=='True':      
-                                self.iface.messageBar().pushMessage("Atencao","Um erro ocorreu durante a importacao", 1)
+                                self.iface.messageBar().pushMessage("Atencao","Um erro ocorreu durante a importação", 1)
                             else:
                                 try:
                                     self.midvsettingsdialog.ClearEverything()
@@ -573,22 +573,22 @@ class midvatten:
                                 except:
                                     pass                            
                 else:
-                    self.iface.messageBar().pushMessage("Critico","Voce deve selecionar a camada obs_points e o objeto (apenas um!) para o qual os dados do logger devem ser importados!", 2)
+                    self.iface.messageBar().pushMessage("Crítico","Você deve selecionar a camada obs_points e o objeto (apenas um!) para o qual os dados do logger devem ser importados!", 2)
             else: 
-                self.iface.messageBar().pushMessage("Verifique configuracoes","Voce deve selecionar a base de dados primeiro!",2)
+                self.iface.messageBar().pushMessage("Verifique configurações","Você deve selecionar a base de dados primeiro!",2)
 
     def import_wqual_field(self):
         allcritical_layers = ('obs_points', 'w_qual_field')#none of these layers must be in editing mode
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms, allcritical_layers)#verify midv settings are loaded and the critical layers are not in editing mode
         if err_flag == 0:        # unless none of the critical layers are in editing mode
-            sanity = utils.askuser("YesNo","""Voce esta prestes a importar dados de campo de qualidade da agua de um arquivo de texto que deve conter uma linha de cabecalho e as seguintes 10 colunas:\n\n1. obsid\n2. equipe\n3. data_hora - no formato aaaa-mm-dd hh:mm(:ss)\n4. instrumento\n5. parametro - nome do parametro de qualidade\n6. leitura_num - valor do param. (numero real, separador decimal=ponto(.))\n7. leitura_txt - valor do parametro em texto, incluindo <, > etc\n8. unidade\n9. fluxo_lpm - fluxo em litros/minuto\n10. comentario - texto\n\nNote que:\nO arquivo deve ser separado por virgula ou ponto e virgula.\ndata_hora deve ser no formato 'aaaa-mm-dd hh:mm(:ss)'.\nO separador decimal deve ser ponto (.)\nVirgula ou ponto e virgula nao sao permitidos nos comentarios.\nCampos vazios ou nulos nao sao permitidos para obsid, data_hora ou parametro, tais linhas serao excluidas da importacao.\nCada combinacao de obsid, data_hora e parametro deve ser unica.\n\nContinuar?""",'Voce tem certeza?')
+            sanity = utils.askuser("YesNo","""Você está prestes a importar dados de campo de qualidade da água de um arquivo de texto que deve conter uma linha de cabeçalho e as seguintes 10 colunas:\n\n1. obsid\n2. equipe\n3. data_hora - no formato aaaa-mm-dd hh:mm(:ss)\n4. instrumento\n5. parâmetro - nome do parâmetro de qualidade\n6. leitura_num - valor do param. (número real, separador decimal=ponto(.))\n7. leitura_txt - valor do parâmetro em texto, incluindo <, > etc\n8. unidade\n9. fluxo_lpm - fluxo em litros/minuto\n10. comentário - texto\n\nNote que:\nO arquivo deve ser separado por vírgula ou ponto e vírgula.\ndata_hora deve ser no formato 'aaaa-mm-dd hh:mm(:ss)'.\nO separador decimal deve ser ponto (.)\nVírgula ou ponto e vírgula não são permitidos nos comentários.\nCampos vazios ou nulos não são permitidos para obsid, data_hora ou parâmetro, tais linhas serão excluídas da importação.\nCada combinação de obsid, data_hora e parâmetro deve ser única.\n\nContinuar?""",'Você tem certeza?')
             #utils.pop_up_info(sanity.result)   #debugging
             if sanity.result == 1:
                 from import_data_to_db import midv_data_importer
                 importinstance = midv_data_importer()
                 importinstance.wqualfield_import()
                 if importinstance.status=='True':      # 
-                    self.iface.messageBar().pushMessage("Info","%s parametros de qualidade da agua foram importados para a base de dados"%str(importinstance.recsafter - importinstance.recsbefore), 0)
+                    self.iface.messageBar().pushMessage("Info","%s parâmetros de qualidade da água foram importados para a base de dados"%str(importinstance.recsafter - importinstance.recsbefore), 0)
                     try:
                         self.midvsettingsdialog.ClearEverything()
                         self.midvsettingsdialog.LoadAndSelectLastSettings()
@@ -599,13 +599,13 @@ class midvatten:
         allcritical_layers = ('obs_points', 'w_qual_lab')#none of these layers must be in editing mode
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms, allcritical_layers)#verify midv settings are loaded and the critical layers are not in editing mode
         if err_flag == 0:        # unless none of the critical layers are in editing mode
-            sanity = utils.askuser("YesNo","""Voce este prestes a importar dados de laboratorio de qualidade da agua de um arquivo de texto que deve conter uma linha de cabecalho e as seguintes 12 colunas:\n\n1. obsid - deve existir na tabela obs_points\n2. profundidade - profundidade da amostra (numero real)\n3. relatorio - cada par de relatorio e parametro deve ser unico!\n4. projeto\n5. equipe\n6. data_hora - no formato aaaa-mm-dd hh:mm(:ss)\n7. metodo_analise\n8. parametro - nome do parametro de qualidade\n9. leitura_num - valor do param. (numero real, separador decimal=ponto(.))\n10. leitura_txt - valor do parametro como texto, incluindo<, > etc\n11. unidade\n12. comentario - texto, evite virgula e ponto e virgula\n\nNote que:\nO arquivo deve ser separado por virgula ou ponto e virgula.\ndata_hora deve ser no formato 'aaaa-mm-dd hh:mm(:ss)'.\nO separador decimal deve ser ponto (.)\nVirgula ou ponto e virgula nao sao permitidos nos comentarios.\nCampos vazios ou nulos nao sao permitidos para obsid, relatorio ou parametro, tais linhas serao excluidas da importacao.\n Cada combinacao de relatorio e parametro deve ser unica.\n\nContinuar?""",'Voce tem certeza?')
+            sanity = utils.askuser("YesNo","""Você este prestes a importar dados de laboratório de qualidade da água de um arquivo de texto que deve conter uma linha de cabeçalho e as seguintes 12 colunas:\n\n1. obsid - deve existir na tabela obs_points\n2. profundidade - profundidade da amostra (número real)\n3. relatório - cada par de relatório e parâmetro deve ser único!\n4. projeto\n5. equipe\n6. data_hora - no formato aaaa-mm-dd hh:mm(:ss)\n7. metodo_analise\n8. parâmetro - nome do parâmetro de qualidade\n9. leitura_num - valor do param. (número real, separador decimal=ponto(.))\n10. leitura_txt - valor do parâmetro como texto, incluindo<, > etc\n11. unidade\n12. comentário - texto, evite vírgula e ponto e vírgula\n\nNote que:\nO arquivo deve ser separado por vírgula ou ponto e vírgula.\ndata_hora deve ser no formato 'aaaa-mm-dd hh:mm(:ss)'.\nO separador decimal deve ser ponto (.)\nVirgula ou ponto e vírgula não são permitidos nos comentários.\nCampos vazios ou nulos não são permitidos para obsid, relatório ou parâmetro, tais linhas serão excluídas da importação.\n Cada combinação de relatório e parâmetro deve ser única.\n\nContinuar?""",'Você tem certeza?')
             if sanity.result == 1:
                 from import_data_to_db import midv_data_importer
                 importinstance = midv_data_importer()
                 importinstance.wquallab_import()
                 if importinstance.status=='True':      # 
-                    self.iface.messageBar().pushMessage("Info","%s parametros de qualidade da agua foram importados para a base de dados"%str(importinstance.recsafter - importinstance.recsbefore), 0)
+                    self.iface.messageBar().pushMessage("Info","%s parâmetros de qualidade da água foram importados para a base de dados"%str(importinstance.recsafter - importinstance.recsbefore), 0)
                     try:
                         self.midvsettingsdialog.ClearEverything()
                         self.midvsettingsdialog.LoadAndSelectLastSettings()
@@ -618,10 +618,10 @@ class midvatten:
 
         if (utils.sql_load_fr_db(r"""SELECT tbl_name FROM sqlite_master where tbl_name = 'meteo'""")[0]==True and len(utils.sql_load_fr_db(r"""SELECT tbl_name FROM sqlite_master where tbl_name = 'meteo'""")[1])==0) or (utils.sql_load_fr_db(r"""SELECT tbl_name FROM sqlite_master where tbl_name = 'meteo'""")[0]==False): #verify there actually is a meteo table (introduced in midv plugin version 1.1)
             err_flag += 1
-            self.iface.messageBar().pushMessage("Erro","Nao ha tabela para dados metereologicos em sua base de dados! Sua base de dados deve ter sido criada em uma versao anterior do plugin Midvatten",2,duration=15)
+            self.iface.messageBar().pushMessage("Erro","Não há tabela para dados metereológicos em sua base de dados! Sua base de dados deve ter sido criada em uma versão anterior do plugin Midvatten",2,duration=15)
         
         if err_flag == 0:        # unless none of the critical layers are in editing mode or the database is so old no meteo table exist
-            sanity = utils.askuser("YesNo","""Voce esta prestes a importar dados metereologicos de um arquivo de texto que deve conter uma linha de cabecalho e 8 colunas:\n\n"obsid", "instrumentid", "parametro", "data_hora", "leitura_num", "leitura_txt", "unidade", "comentario"\n\nNote que:\nO arquivo deve ser separado por virgula ou ponto e virgula.\ndata_hora deve ser no formato 'aaaa-mm-dd hh:mm(:ss)'.\nO separador decimal deve ser ponto (.)\nVirgula e ponto e virgula nao sao permitidos nos comentarios.\nCertifique-se de usar um numero limitado de parametros, pois todos serao adicionados a tabela zz_meteoparam na base de dados durante a importacao.\nCampos vazios ou nulos nao sao permitidos para obsid, instrumentid, parametro ou data_hora.\nCada combinacao de obsid, instrumentid, parametro e data_hora deve ser unica.\n\nContinuar?""",'Voce tem certeza?')
+            sanity = utils.askuser("YesNo","""Você está prestes a importar dados metereológicos de um arquivo de texto que deve conter uma linha de cabeçalho e 8 colunas:\n\n"obsid", "instrumentid", "parâmetro", "data_hora", "leitura_num", "leitura_txt", "unidade", "comentário"\n\nNote que:\nO arquivo deve ser separado por vírgula ou ponto e vírgula.\ndata_hora deve ser no formato 'aaaa-mm-dd hh:mm(:ss)'.\nO separador decimal deve ser ponto (.)\nVírgula e ponto e vírgula não são permitidos nos comentários.\nCertifique-se de usar um número limitado de parâmetros, pois todos serão adicionados a tabela zz_meteoparam na base de dados durante a importação.\nCampos vazios ou nulos não são permitidos para obsid, instrumentid, parâmetro ou data_hora.\nCada combinação de obsid, instrumentid, parâmetro e data_hora deve ser única.\n\nContinuar?""",'Você tem certeza?')
             if sanity.result == 1:
                 from import_data_to_db import midv_data_importer
                 importinstance = midv_data_importer()
@@ -637,7 +637,7 @@ class midvatten:
     def loadthelayers(self):
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms)#verify midv settings are loaded
         if err_flag == 0:
-            sanity = utils.askuser("YesNo","""Esta operacao ira carregar as camadas padrao (com layout e simbolos pre-definidos, etc.) da sua base de dados selecionada para o seu projeto qgis.\n\nSe qualquer camada padrao Midvatten ja estiver carregada em seu projeto qgis, elas serao excluidas.\n\nContinuar?""",'Atencao!')
+            sanity = utils.askuser("YesNo","""Esta operação irá carregar as camadas padrão (com layout e símbolos pré-definidos, etc.) da sua base de dados selecionada para o seu projeto qgis.\n\nSe qualquer camada padrão Midvatten já estiver carregada em seu projeto qgis, elas serão excluidas.\n\nContinuar?""",'Atencao!')
             if sanity.result == 1:
                 #show the user this may take a long time...
                 QApplication.setOverrideCursor(QCursor(Qt.WaitCursor))
@@ -645,7 +645,7 @@ class midvatten:
                 QApplication.restoreOverrideCursor()#now this long process is done and the cursor is back as normal
 
     def new_db(self): 
-        sanity = utils.askuser("YesNo","""Isto criara uma nova BD Midvatten\ncom design pre-definido.\n\nContinuar?""",'Voce tem certeza?')
+        sanity = utils.askuser("YesNo","""Isto criara uma nova BD Midvatten\ncom design pre-definido.\n\nContinuar?""",'Você tem certeza?')
         if sanity.result == 1:
             filenamepath = os.path.join(os.path.dirname(__file__),"metadata.txt" )
             iniText = QSettings(filenamepath , QSettings.IniFormat)
@@ -669,7 +669,7 @@ class midvatten:
         err_flag = utils.verify_layer_selection(err_flag,0)#verify the selected layer has attribute "obsid" and that some features are selected
         if (self.ms.settingsdict['tstable'] =='' or self.ms.settingsdict['tscolumn'] == ''):
             err_flag += 1
-            self.iface.messageBar().pushMessage("Erro","Por favor, configure a tabela serie temporal e coluna nas configuracoes Midvatten.", 2,duration =15)
+            self.iface.messageBar().pushMessage("Erro","Por favor, configure a tabela serie temporal e coluna nas configurações Midvatten.", 2,duration =15)
         if err_flag == 0:
             dlg = TimeSeriesPlot(qgis.utils.iface.activeLayer(), self.ms.settingsdict)
 
@@ -678,7 +678,7 @@ class midvatten:
         err_flag = utils.verify_layer_selection(err_flag,0)#verify the selected layer has attribute "obsid" and that some features are selected
         if self.ms.settingsdict['stratigraphytable']=='':
             err_flag += 1
-            self.iface.messageBar().pushMessage("Erro","Por favor, configure a tabela estratigrafia nas configuracoes Midvatten.", 2,duration =15)
+            self.iface.messageBar().pushMessage("Erro","Por favor, configure a tabela estratigrafia nas configurações Midvatten.", 2,duration =15)
         if err_flag == 0 and utils.strat_selection_check(qgis.utils.iface.activeLayer()) == 'ok':
             dlg = Stratigraphy(self.iface, qgis.utils.iface.activeLayer(), self.ms.settingsdict)
             dlg.showSurvey()
@@ -688,7 +688,7 @@ class midvatten:
         all_critical_layers=('obs_points')
         err_flag = utils.verify_msettings_loaded_and_layer_edit_mode(self.iface, self.ms, all_critical_layers)#verify midv settings are loaded
         if not(err_flag == 0):
-            self.iface.messageBar().pushMessage("Erro","Verifique as configuracoes Midvatten e certifique-se que a camada 'obs_points' nao esta no modo editar.", 2, duration=10)
+            self.iface.messageBar().pushMessage("Erro","Verifique as configurações Midvatten e certifique-se que a camada 'obs_points' não está no modo editar.", 2, duration=10)
             return
 
         SectionLineLayer = qgis.utils.iface.mapCanvas().currentLayer()#MUST BE LINE VECTOR LAYER WITH SAME EPSG as MIDV_OBSDB AND THERE MUST BE ONLY ONE SELECTED FEATURE
@@ -699,9 +699,9 @@ class midvatten:
                 if geom.wkbType() == QGis.WKBLineString:#...and that the active layer is a line vector layer
                     pass
                 else:
-                    msg = 'Voce deve ativar a camada vetor (linha) que define a secao.'
+                    msg = 'Você deve ativar a camada vetor (linha) que define a seção.'
         else:
-            msg = 'Voce deve ativar a camada vetor (linha) e selecionar exatamente uma feicao que define a secao'
+            msg = 'Você deve ativar a camada vetor (linha) e selecionar exatamente uma feição que define a seção'
         
         #Then verify that at least two feature is selected in obs_points layer, and get a list (OBSID) of selected obs_points
         obs_points_layer = utils.find_layer('obs_points')
@@ -714,7 +714,7 @@ class midvatten:
                 i+=1
             OBSID = tuple(obsidlist)#because module sectionplot depends on obsid being a tuple
         else:
-            msg = 'Voce deve selecionar pelo menos dois objetos na camada obs_points'
+            msg = 'Você deve selecionar pelo menos dois objetos na camada obs_points'
         
         if msg:#if something went wrong
             self.iface.messageBar().pushMessage("Error",msg, 2,duration =15)
@@ -730,7 +730,7 @@ class midvatten:
         err_flag = utils.verify_layer_selection(err_flag,0)#verify the selected layer has attribute "obsid" and that some features are selected
         if (self.ms.settingsdict['xytable'] =='' or self.ms.settingsdict['xy_xcolumn'] == '' or (self.ms.settingsdict['xy_y1column'] == '' and self.ms.settingsdict['xy_y2column'] == '' and self.ms.settingsdict['xy_y3column'] == '')):
             err_flag += 1
-            self.iface.messageBar().pushMessage("Erro","Por favor, configure a tabela xy series e colunas nas configuracoes Midvatten.", 2,duration =15)
+            self.iface.messageBar().pushMessage("Erro","Por favor, configure a tabela xy series e colunas nas configurações Midvatten.", 2,duration =15)
         if err_flag == 0:
             dlg = XYPlot(qgis.utils.iface.activeLayer(), self.ms.settingsdict)
 
@@ -785,9 +785,9 @@ class midvatten:
         layername = 'obs_points'
         err_flag = utils.verify_this_layer_selected_and_not_in_edit_mode(err_flag, layername)
         if err_flag == 0:
-            sanity = utils.askuser("AllSelected","""Voce quer atualizar as coordenadas\npara Todos ou apenas objetos Selecionados?""")
+            sanity = utils.askuser("AllSelected","""Você quer atualizar as coordenadas\npara Todos ou apenas objetos Selecionados?""")
             if sanity.result == 0:  #IF USER WANT ALL OBJECTS TO BE UPDATED
-                sanity = utils.askuser("YesNo","""Sanity check! Isto ira alterar a base de dados.\nAs coordenadas serao adicionadas nos campos leste e norte\npara TODOS objetos na tabela obs_points.\nContinuar?""")
+                sanity = utils.askuser("YesNo","""Sanity check! Isto ira alterar a base de dados.\nAs coordenadas serão adicionadas nos campos leste e norte\npara TODOS objetos na tabela obs_points.\nContinuar?""")
                 if sanity.result==1:
                     ALL_OBS = utils.sql_load_fr_db("select distinct obsid from obs_points")[1]#a list of unicode strings is returned
                     observations = [None]*len(ALL_OBS)
@@ -798,7 +798,7 @@ class midvatten:
                     from coords_and_position import updatecoordinates
                     updatecoordinates(observations)
             elif sanity.result == 1:    #IF USER WANT ONLY SELECTED OBJECTS TO BE UPDATED
-                sanity = utils.askuser("YesNo","""Sanity check! Isto ira alterar a base de dados.\nAs coordenadas serao adicionadas nos campos leste e norte\npara os objetos SELECIONADOS na tabela obs_points.\nContinuar?""")
+                sanity = utils.askuser("YesNo","""Sanity check! Isto ira alterar a base de dados.\nAs coordenadas serão adicionadas nos campos leste e norte\npara os objetos SELECIONADOS na tabela obs_points.\nContinuar?""")
                 if sanity.result==1:
                     layer = self.iface.activeLayer()
                     if utils.selection_check(layer) == 'ok':    #Checks that there are some objects selected at all!
@@ -813,9 +813,9 @@ class midvatten:
         err_flag = utils.verify_this_layer_selected_and_not_in_edit_mode(err_flag, layername)
         if err_flag == 0:
             layer = self.iface.activeLayer()
-            sanity = utils.askuser("AllSelected","""Voce quer atualizar a posicao\npara TODOS objetos ou apenas Selecionados?""")
+            sanity = utils.askuser("AllSelected","""Você quer atualizar a posição\npara TODOS objetos ou apenas Selecionados?""")
             if sanity.result == 0:      #IF USER WANT ALL OBJECTS TO BE UPDATED
-                sanity = utils.askuser("YesNo","""Sanity check! Isto ira alterar a base de dados\nTODOS objetos em obs_points serao movidos para a posicao\ndada pelas coordenadas nos campos leste e norte.\nContinuar?""")
+                sanity = utils.askuser("YesNo","""Sanity check! Isto ira alterar a base de dados\nTODOS objetos em obs_points serão movidos para a posição\ndada pelas coordenadas nos campos leste e norte.\nContinuar?""")
                 if sanity.result==1:
                     ALL_OBS = utils.sql_load_fr_db("select distinct obsid from obs_points")[1]
                     observations = [None]*len(ALL_OBS)
@@ -827,7 +827,7 @@ class midvatten:
                     updateposition(observations)
                     layer.updateExtents()
             elif sanity.result == 1:    #IF USER WANT ONLY SELECTED OBJECTS TO BE UPDATED
-                sanity = utils.askuser("YesNo","""Sanity check! Isto ira alterar a base de dados.\nObjetos selecionados em obs_points serao movidos para a posicao\ndada pelas coordenadas nos campos leste e norte.\nContinuar?""")
+                sanity = utils.askuser("YesNo","""Sanity check! Isto ira alterar a base de dados.\nObjetos selecionados em obs_points serão movidos para a posição\ndada pelas coordenadas nos campos leste e norte.\nContinuar?""")
                 if sanity.result==1:
                     if utils.selection_check(layer) == 'ok':    #Checks that there are some objects selected at all!
                         observations = utils.getselectedobjectnames(layer)
@@ -847,12 +847,12 @@ class midvatten:
         err_flag = utils.verify_layer_selection(err_flag)#verify the selected layer has attribute "obsid" and that some feature(s) is selected
         if self.ms.settingsdict['database'] == '' or self.ms.settingsdict['wqualtable']=='' or self.ms.settingsdict['wqual_paramcolumn']=='' or self.ms.settingsdict['wqual_valuecolumn']=='':
             err_flag += 1
-            self.iface.messageBar().pushMessage("Erro","Cheque as configuracoes Midvatten. \nAlgo esta errado na aba 'W quality report'!", 2,duration =15)
+            self.iface.messageBar().pushMessage("Erro","Cheque as configurações Midvatten. \nAlgo está errado na aba 'W quality report'!", 2,duration =15)
         if err_flag == 0:
             fail = 0
             for k in utils.getselectedobjectnames(qgis.utils.iface.activeLayer()):#all selected objects
                 if not utils.sql_load_fr_db("select obsid from %s where obsid = '%s'"%(self.ms.settingsdict['wqualtable'],str(k)))[1]:#if there is a selected object without water quality data
-                    self.iface.messageBar().pushMessage("Erro","Sem dados de qualidade da agua para %s"%str(k), 2)
+                    self.iface.messageBar().pushMessage("Erro","Sem dados de qualidade da água para %s"%str(k), 2)
                     fail = 1
             if not fail == 1:#only if all objects has data
                 wqualreport(qgis.utils.iface.activeLayer(),self.ms.settingsdict)#TEMPORARY FOR GVAB
