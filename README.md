@@ -1,15 +1,15 @@
-Midvatten plugin for QGIS is developed to manage data from hydrogeological investigations.
+O plugin Midvatten para QGIS foi desenvolvido para processar dados de investigações hidrogeológicas.
 
-The following features are included:
+As seguintes funções estão incluidas:
 
-* Database generator
-* Load Default Layers
-* Importing tools
-* Simple edit tools
-* View plots
-* View reports
-* Stratigraphy plot + borehole report = A simple "borehole log"
+* Gerador de base de dados
+* Gerador de camadas padrão
+* Ferramentas de importação
+* Ferramentas de edição simples
+* Geração de gráficos
+* Geração de relatórios
+* Plotagem estratigráfica + relatório de perfuração = A simple "borehole log"
 
-Please visit the [web page for more information](https://sites.google.com/site/midvattenpluginforqgis/).
+Visite [a página da web para mais informações](https://sites.google.com/site/midvattenpluginforqgis/).
 
 _Copyright (c) 2014 Josef Källgården_
