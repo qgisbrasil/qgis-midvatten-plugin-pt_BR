@@ -1,4 +1,4 @@
-# -*- coding: utf-8 -*-
+# -*- coding: iso-8859-1 -*-
 """
 /***************************************************************************
  This part of the Midvatten plugin creates a new "midvatten project plugin". 
