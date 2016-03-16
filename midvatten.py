@@ -1,4 +1,4 @@
-# -*- coding: latin-1 -*-
+# -*- coding: utf-8 -*-
 """
 /***************************************************************************
  This is the main part of the Midvatten plugin. 
