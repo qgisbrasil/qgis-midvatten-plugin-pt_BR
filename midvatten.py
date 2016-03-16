@@ -1,4 +1,4 @@
-# -*- coding: cp860 -*- 
+# encoding: utf-8
 """
 /***************************************************************************
  This is the main part of the Midvatten plugin. 
